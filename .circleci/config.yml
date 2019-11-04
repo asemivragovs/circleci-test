@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  win: circleci/windows@1.0.0
 jobs:
   save_data_1:
     docker:
@@ -26,7 +24,7 @@ jobs:
   save_data_2:
     executor:
       name: win/vs2019
-      shell: /bin/bash
+      shell: bash.exe
     steps:
       - checkout
       - run: echo "Test 2"
