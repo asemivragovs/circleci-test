@@ -27,7 +27,7 @@ jobs:
             - "~/test_dir"
   save_data_2:
     docker:
-      image: circleci/redis:5.0.0-32bit
+      - image: circleci/redis:5.0.0-32bit
     steps:
       - checkout
       - run: echo "Test 2"
