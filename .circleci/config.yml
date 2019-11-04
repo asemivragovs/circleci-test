@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ../test_dir
+          at: ../
       - run:
           name: Check workspace attached
           command: |
