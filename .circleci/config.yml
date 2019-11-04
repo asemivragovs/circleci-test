@@ -14,8 +14,8 @@ jobs:
             echo "test-1" > test_dir/test_file.txt
           shell: /bin/bash
       - persist_to_workspace:
-          root: test_dir
-          paths: .
+          root: ../
+          paths: test_dir
   check_data:
     docker:
       - image: circleci/ruby:2.4.1
