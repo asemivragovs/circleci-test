@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  win: circleci/windows@1.0.0
 jobs:
   save_data_1:
     docker:
@@ -22,8 +24,9 @@ jobs:
           paths:
             - "~/test_dir"
   save_data_2:
-    docker:
-      - image: circleci/python:3.6.4
+    executor:
+      name: win/vs2019
+      shell: powershell.exe
     steps:
       - checkout
       - run: echo "Test 2"
@@ -70,15 +73,7 @@ jobs:
       - checkout
       - restore_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
-      - run:
-          name: Build Voice CPP slave AGAIN
-          command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-1-again" > test_dir/test_file.txt
-          shell: /bin/bash
+      - run: echo "Test cache"
       - save_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
           paths:
@@ -102,15 +97,7 @@ jobs:
       - checkout
       - restore_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
-      - run:
-          name: Build Voice CPP slave AGAIN
-          command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-2-again" > test_dir/test_file.txt
-          shell: /bin/bash
+      - run: echo "Test cache"
       - save_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
           paths:
@@ -134,15 +121,7 @@ jobs:
       - checkout
       - restore_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
-      - run:
-          name: Build Voice CPP slave AGAIN
-          command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-3-again" > test_dir/test_file.txt
-          shell: /bin/bash
+      - run: echo "Test cache"
       - save_cache:
           key: -v1-test{{ arch }}-{{ .Revision }}
           paths:
