@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="392">
+              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -127,7 +127,7 @@
       <workItem from="1572367846689" duration="434000" />
       <workItem from="1572854926961" duration="6776000" />
       <workItem from="1572889717697" duration="89000" />
-      <workItem from="1572897889360" duration="2381000" />
+      <workItem from="1572897889360" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -283,11 +283,25 @@
       <option name="project" value="LOCAL" />
       <updated>1572902381591</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Cache test 6">
+      <created>1572902598743</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1572902598743</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Cache test 7">
+      <created>1572902787982</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1572902787982</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17390000" />
+    <option name="totallyTimeSpent" value="18010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -339,14 +353,16 @@
     <MESSAGE value="Cache test 2" />
     <MESSAGE value="Cache test 4" />
     <MESSAGE value="Cache test 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cache test 5" />
+    <MESSAGE value="Cache test 6" />
+    <MESSAGE value="Cache test 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cache test 7" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="392">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
         </state>
       </provider>
     </entry>

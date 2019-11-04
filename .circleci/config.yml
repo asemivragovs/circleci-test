@@ -1,7 +1,7 @@
 version: 2.1
 
-orbs:
-  win: circleci/windows@1.0.0
+#orbs:
+#  win: circleci/windows@1.0.0
 
 jobs:
   save_data_1:
@@ -26,9 +26,8 @@ jobs:
           paths:
             - "~/test_dir"
   save_data_2:
-    executor:
-      name: win/vs2019
-      shell: bash.exe
+    docker:
+      image: circleci/redis:5.0.0-32bit
     steps:
       - checkout
       - run: echo "Test 2"
