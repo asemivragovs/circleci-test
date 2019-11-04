@@ -10,8 +10,8 @@ jobs:
           name: Build Voice CPP slave
           command: |
             echo "currenr dir: $(pwd)"
-            mkdir -p test_dir
-            echo "test-1" > test_dir/test_file.txt
+            mkdir -p test_dir_saved/test_dir
+            echo "test-1" > test_dir_saved/test_dir/test_file.txt
           shell: /bin/bash
       - persist_to_workspace:
           root: test_dir_saved
