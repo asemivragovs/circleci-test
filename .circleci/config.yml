@@ -26,7 +26,7 @@ jobs:
   save_data_2:
     executor:
       name: win/vs2019
-      shell: powershell.exe
+      shell: /bin/bash
     steps:
       - checkout
       - run: echo "Test 2"
