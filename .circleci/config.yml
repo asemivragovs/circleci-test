@@ -10,11 +10,11 @@ jobs:
           name: Build Voice CPP slave
           command: |
             echo "currenr dir: $(pwd)"
-            mkdir -p test_dir_saved/test_dir
-            echo "test-1" > test_dir_saved/test_dir/test_file.txt
+            mkdir -p test_dir
+            echo "test-1" > test_dir/test_file.txt
           shell: /bin/bash
       - persist_to_workspace:
-          root: test_dir_saved
+          root: .
           paths: test_dir
   check_data:
     docker:
@@ -22,11 +22,11 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: test_dir_saved/test_dir
+          at: test_dir
       - run:
           name: Check workspace attached
           command: |
-            cat test_dir_saved/test_dir/test_file.txt
+            cat test_dir/test_file.txt
             if [[ $? -eq 0 ]]; then
                 echo "Workspace persisted";
             else
