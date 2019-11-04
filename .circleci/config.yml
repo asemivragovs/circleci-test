@@ -6,102 +6,33 @@ jobs:
     steps:
       - checkout
       - run: echo "Test 1"
+      - restore_cache:
+          key: -v1-test{{ arch }}-{{ .Revision }}
       - run:
           name: Build Voice CPP slave
           command: |
             echo "currenr dir: $(pwd)"
-            echo "Job-1" > job1.txt
             cd ~
             echo "currenr dir-new: $(pwd)"
             mkdir -p test_dir
             echo "test-1" > test_dir/test_file.txt
           shell: /bin/bash
-      - persist_to_workspace:
-          root: ../
-          paths: test_dir
-  save_data_2:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "Test 2"
-      - run:
-          name: Build Voice CPP slave
-          command: |
-            echo "currenr dir: $(pwd)"
-            echo "Job-2" > job2.txt
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-2" > test_dir/test_file.txt
-          shell: /bin/bash
-      - persist_to_workspace:
-          root: ../
-          paths: test_dir
-  save_data_3:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "Test 1"
-      - run:
-          name: Build Voice CPP slave
-          command: |
-            echo "currenr dir: $(pwd)"
-            echo "Job-3" > job3.txt
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-3" > test_dir/test_file.txt
-          shell: /bin/bash
-      - persist_to_workspace:
-          root: ../
-          paths: test_dir
+      - save_cache:
+          key: -v1-test{{ arch }}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
   check_data_1:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - attach_workspace:
-          at: ../
-      - run:
-          name: Check workspace attached
-          command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            cat test_dir/test_file.txt
-            if [[ $? -eq 0 ]]; then
-                echo "Workspace persisted";
-            else
-                echo "Workspace did not persist"; exit 1
-            fi
-  check_data_2:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ../
-      - run:
-          name: Check workspace attached
-          command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            cat test_dir/test_file.txt
-            if [[ $? -eq 0 ]]; then
-                echo "Workspace persisted";
-            else
-                echo "Workspace did not persist"; exit 1
-            fi
-  check_data_3:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ../
+      - restore_cache:
+          key: -v1-test{{ arch }}-{{ .Revision }}
+      - run: echo "Cache missing"
+      - save_cache:
+          key: -v1-test{{ arch }}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
       - run:
           name: Check workspace attached
           command: |
@@ -119,14 +50,14 @@ workflows:
   test_workspace:
     jobs:
       - save_data_1
-      - save_data_2
-      - save_data_3
+#      - save_data_2
+#      - save_data_3
       - check_data_1:
           requires:
             - save_data_1
-      - check_data_2:
-          requires:
-            - save_data_2
-      - check_data_3:
-          requires:
-            - save_data_3
+#      - check_data_2:
+#          requires:
+#            - save_data_2
+#      - check_data_3:
+#          requires:
+#            - save_data_3

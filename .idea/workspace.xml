@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+            <state relative-caret-position="564">
+              <caret line="57" selection-start-line="57" selection-start-column="1" selection-end-line="62" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -39,6 +39,12 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>job</find>
+      <find>key: -v1-test{{ arch }}-{{ .Revision }}</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,11 +57,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="586" />
-    <option name="y" value="1463" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="180" />
+    <option name="y" value="132" />
+    <option name="width" value="1080" />
+    <option name="height" value="659" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -119,7 +125,9 @@
       <workItem from="1572267427067" duration="3442000" />
       <workItem from="1572355044282" duration="2017000" />
       <workItem from="1572367846689" duration="434000" />
-      <workItem from="1572854926961" duration="4876000" />
+      <workItem from="1572854926961" duration="6776000" />
+      <workItem from="1572889717697" duration="89000" />
+      <workItem from="1572897889360" duration="804000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -240,17 +248,24 @@
       <option name="project" value="LOCAL" />
       <updated>1572859650992</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Persist to workspace test 15">
+      <created>1572860056459</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572860056459</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13020000" />
+    <option name="totallyTimeSpent" value="15813000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="586" y="1463" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21244635" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16237482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,14 +306,15 @@
     <MESSAGE value="Persist to workspace test 12" />
     <MESSAGE value="Persist to workspace test 13" />
     <MESSAGE value="Persist to workspace test 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Persist to workspace test 14" />
+    <MESSAGE value="Persist to workspace test 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Persist to workspace test 15" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+        <state relative-caret-position="564">
+          <caret line="57" selection-start-line="57" selection-start-column="1" selection-end-line="62" selection-end-column="26" />
         </state>
       </provider>
     </entry>
