@@ -10,6 +10,8 @@ jobs:
           name: Build Voice CPP slave
           command: |
             echo "currenr dir: $(pwd)"
+            cd ~
+            echo "currenr dir-new: $(pwd)"
             mkdir -p test_dir
             echo "test-1" > test_dir/test_file.txt
           shell: /bin/bash
