@@ -9,13 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="Workspace test">
-      <change afterPath="$PROJECT_DIR$/.idea/circleci-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -123,7 +119,7 @@
       <workItem from="1572267427067" duration="3442000" />
       <workItem from="1572355044282" duration="2017000" />
       <workItem from="1572367846689" duration="434000" />
-      <workItem from="1572854926961" duration="1448000" />
+      <workItem from="1572854926961" duration="1714000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -146,11 +142,25 @@
       <option name="project" value="LOCAL" />
       <updated>1572270818542</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Persist to workspace test 1">
+      <created>1572856452675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572856452675</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Persist to workspace test 2">
+      <created>1572856549094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572856549094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9592000" />
+    <option name="totallyTimeSpent" value="9858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="586" y="1463" width="1440" height="877" extended-state="6" />
@@ -167,7 +177,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -183,14 +193,16 @@
     <MESSAGE value="Workflow test" />
     <MESSAGE value="Workspace test" />
     <MESSAGE value="Python dependency caching test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Python dependency caching test" />
+    <MESSAGE value="Persist to workspace test 1" />
+    <MESSAGE value="Persist to workspace test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Persist to workspace test 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>

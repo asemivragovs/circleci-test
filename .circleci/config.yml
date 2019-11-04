@@ -6,7 +6,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Test 1"
-      - run: echo workspace;
       - run:
         name: Save directory
         command: |
@@ -17,40 +16,6 @@ jobs:
       - persist_to_workspace:
           root: /demo_dir
           paths: test_dir
-#  save_data_2:
-#    docker:
-#      - image: circleci/ruby:2.4.1
-#    steps:
-#      - checkout
-#      - run: echo "Test 1"
-#      - run: echo workspace;
-#      - run:
-#        name: "Save directory"
-#        command: |
-#          echo "Current path: $(pwd)"
-#          mkdir -p test_dir
-#          echo "Test-1" > test_dir/test_file.txt
-#        shell: /bin/bash
-#      - persist_to_workspace:
-#          root: /demo_dir
-#          paths: test_dir
-#  save_data_3:
-#    docker:
-#      - image: circleci/ruby:2.4.1
-#    steps:
-#      - checkout
-#      - run: echo "Test 1"
-#      - run: echo workspace;
-#      - run:
-#        name: "Save directory"
-#        command: |
-#          echo "Current path: $(pwd)"
-#          mkdir -p test_dir
-#          echo "Test-1" > test_dir/test_file.txt
-#        shell: /bin/bash
-#      - persist_to_workspace:
-#          root: /demo_dir
-#          paths: test_dir
   check_data:
     docker:
       - image: circleci/ruby:2.4.1
