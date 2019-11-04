@@ -28,6 +28,9 @@ jobs:
       - run:
           name: Check workspace attached
           command: |
+            echo "currenr dir: $(pwd)"
+            cd ~
+            echo "currenr dir-new: $(pwd)"
             cat test_dir/test_file.txt
             if [[ $? -eq 0 ]]; then
                 echo "Workspace persisted";
