@@ -173,6 +173,7 @@ workflows:
   version: 2
   test_workspace:
     jobs:
+      - call_command
       - save_data_1
       - save_data_2
       - save_data_3
