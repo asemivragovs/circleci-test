@@ -13,14 +13,13 @@ commands:
           name: "Test command"
           command: |
             echo "Test command"
-            echo "Param: $(should_exit)"
-            if [ parameters.should_exit = true ]; then
+            echo "Param: $(<< parameters.should_exit >>)"
+            if [ << parameters.should_exit >> = true ]; then
               echo "Should exit"
               exit 1
             else
               echo "Should not exit"
             fi
-          shell: /bin/bash
 
 jobs:
   call_command:
@@ -31,7 +30,6 @@ jobs:
           name: "Call command"
           command: |
             echo "Call command"
-          shell: /bin/bash
       - test_command:
           should_exit: true
   save_data_1:
