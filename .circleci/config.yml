@@ -13,7 +13,7 @@ commands:
           name: "Test command"
           command: |
             echo "Test command"
-            echo "Param: << parameters.should_exit >>"
+            echo "Param: $(<< parameters.should_exit >>)"
             if [ << parameters.should_exit >> = true ]; then
               echo "Should exit"
               exit 1
@@ -31,7 +31,7 @@ jobs:
           command: |
             echo "Call command"
       - test_command:
-          should_exit: false
+          should_exit: true
   save_data_1:
     docker:
       - image: circleci/ruby:2.4.1
