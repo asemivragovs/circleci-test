@@ -8,6 +8,7 @@ commands:
     parameters:
       should_exit:
         type: boolean
+        default: false
     steps:
       - run:
           name: "Test command"
@@ -22,7 +23,26 @@ commands:
             fi
 
 jobs:
-  call_command:
+  call_command_1:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: "Call command"
+          command: |
+            echo "Call command"
+      - test_command
+  call_command_2:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: "Call command"
+          command: |
+            echo "Call command"
+      - test_command:
+          should_exit: false
+  call_command_3:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
