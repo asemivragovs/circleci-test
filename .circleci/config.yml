@@ -14,7 +14,7 @@ commands:
           command: |
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
-            if [ << parameters.should_exit >> = true ]; then
+            if [ parameters.should_exit = true ]; then
               echo "Should exit"
               exit 1
             else
