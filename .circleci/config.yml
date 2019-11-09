@@ -4,6 +4,36 @@ version: 2.1
 #  win: circleci/windows@1.0.0
 
 jobs:
+  call_command:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: "Call command"
+          command: |
+            echo "Call command"
+          shell: /bin/bash
+      - test_command:
+          should_exit: true
+  test_command:
+    docker:
+      - image: circleci/ruby:2.4.1
+    parameters:
+      should_exit:
+        type: boolean
+    steps:
+      - run:
+          name: "Test command"
+          command: |
+            echo "Test command"
+            echo "Param: $(should_exit)"
+            if [ parameters.should_exit = true ]; then
+              echo "Should exit"
+              exit 1
+            else
+              echo "Should not exit"
+            fi
+          shell: /bin/bash
   save_data_1:
     docker:
       - image: circleci/ruby:2.4.1
