@@ -3,21 +3,8 @@ version: 2.1
 #orbs:
 #  win: circleci/windows@1.0.0
 
-jobs:
-  call_command:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - run:
-          name: "Call command"
-          command: |
-            echo "Call command"
-          shell: /bin/bash
-      - test_command:
-          should_exit: true
+commands:
   test_command:
-    docker:
-      - image: circleci/ruby:2.4.1
     parameters:
       should_exit:
         type: boolean
@@ -34,6 +21,19 @@ jobs:
               echo "Should not exit"
             fi
           shell: /bin/bash
+
+jobs:
+  call_command:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: "Call command"
+          command: |
+            echo "Call command"
+          shell: /bin/bash
+      - test_command:
+          should_exit: true
   save_data_1:
     docker:
       - image: circleci/ruby:2.4.1
