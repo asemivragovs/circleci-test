@@ -191,7 +191,9 @@ workflows:
   version: 2
   test_workspace:
     jobs:
-      - call_command
+      - call_command_1
+      - call_command_2
+      - call_command_3
       - save_data_1
       - save_data_2
       - save_data_3
