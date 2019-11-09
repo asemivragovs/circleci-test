@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+            <state relative-caret-position="225">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -46,6 +46,7 @@
       <find>key: -v1-test{{ arch }}-{{ .Revision }}</find>
       <find>circleci/redis</find>
       <find>test_command</find>
+      <find>should_exit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,7 +131,7 @@
       <workItem from="1572889717697" duration="89000" />
       <workItem from="1572897889360" duration="3722000" />
       <workItem from="1572936746417" duration="482000" />
-      <workItem from="1573318426328" duration="1006000" />
+      <workItem from="1573318426328" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -328,11 +329,25 @@
       <option name="project" value="LOCAL" />
       <updated>1573319344573</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Parameters test 3">
+      <created>1573319519687</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573319519687</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Parameters test 4">
+      <created>1573319756472</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1573319756473</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20219000" />
+    <option name="totallyTimeSpent" value="20599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -350,7 +365,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4343949" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4343949" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -362,8 +377,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Persist to workspace test 1" />
-    <MESSAGE value="Persist to workspace test 2" />
     <MESSAGE value="Persist to workspace test 3" />
     <MESSAGE value="Persist to workspace test 4" />
     <MESSAGE value="Persist to workspace test 5" />
@@ -387,14 +400,16 @@
     <MESSAGE value="Cache test 9" />
     <MESSAGE value="Parameters test 1" />
     <MESSAGE value="Parameters test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parameters test 2" />
+    <MESSAGE value="Parameters test 3" />
+    <MESSAGE value="Parameters test 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parameters test 4" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
