@@ -16,8 +16,18 @@ commands:
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
             [ << parameters.should_exit >> = true ] && exit 1 || true
+          shell: /bin/bash
 
 jobs:
+  test_print:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: "Test print"
+          command: |
+            echo "Current user: $USER"
+          shell: /bin/bash
   call_command_1:
     docker:
       - image: circleci/ruby:2.4.1
@@ -186,6 +196,7 @@ workflows:
   version: 2
   test_workspace:
     jobs:
+      - test_print
       - call_command_1
       - call_command_2
       - call_command_3
