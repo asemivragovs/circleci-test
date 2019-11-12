@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
-              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+              <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -137,7 +137,8 @@
       <workItem from="1573320078999" duration="34000" />
       <workItem from="1573320228121" duration="462000" />
       <workItem from="1573545165818" duration="620000" />
-      <workItem from="1573554337528" duration="507000" />
+      <workItem from="1573554337528" duration="564000" />
+      <workItem from="1573555290776" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -412,17 +413,24 @@
       <option name="project" value="LOCAL" />
       <updated>1573555162810</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Parameters test 14">
+      <created>1573555209441</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1573555209441</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22439000" />
+    <option name="totallyTimeSpent" value="22509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="586" y="1463" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22103004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -446,7 +454,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Persist to workspace test 12" />
     <MESSAGE value="Persist to workspace test 13" />
     <MESSAGE value="Persist to workspace test 14" />
     <MESSAGE value="Persist to workspace test 15" />
@@ -471,14 +478,15 @@
     <MESSAGE value="Parameters test 11" />
     <MESSAGE value="Parameters test 12" />
     <MESSAGE value="Parameters test 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parameters test 13" />
+    <MESSAGE value="Parameters test 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parameters test 14" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
         </state>
       </provider>
     </entry>
