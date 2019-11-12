@@ -15,12 +15,7 @@ commands:
           command: |
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
-            if [ << parameters.should_exit >> = true ]; then
-              echo "Should exit"
-              exit 1
-            else
-              echo "Should not exit"
-            fi
+            [ << parameters.should_exit >> = true ] && { "Should exit"; exit 1; } || echo "Should not exit"
 
 jobs:
   call_command_1:
