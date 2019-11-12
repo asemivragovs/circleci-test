@@ -15,7 +15,7 @@ commands:
           command: |
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
-            [ << parameters.should_exit >> = true ] && exit 1 || true
+            [ << parameters.should_exit >> = true ] && exit 1
           shell: /bin/bash
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
           name: "Test print"
           command: |
             echo "Current user: $USER"
+            echo "Who am I: $(whoami)"
           shell: /bin/bash
   call_command_1:
     docker:
