@@ -15,7 +15,7 @@ commands:
           command: |
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
-            [ << parameters.should_exit >> = true ] && exit 1;
+            [[ << parameters.should_exit >> = true ]] && exit 1
 
 jobs:
   call_command_1:
