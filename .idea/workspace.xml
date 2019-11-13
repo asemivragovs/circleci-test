@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="604">
+              <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -147,21 +147,7 @@
       <workItem from="1573577245128" duration="253000" />
       <workItem from="1573585845638" duration="277000" />
       <workItem from="1573628607725" duration="27000" />
-      <workItem from="1573681512415" duration="2350000" />
-    </task>
-    <task id="LOCAL-00007" summary="Persist to workspace test 4">
-      <created>1572856915542</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1572856915542</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Persist to workspace test 5">
-      <created>1572857116123</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1572857116123</updated>
+      <workItem from="1573681512415" duration="2786000" />
     </task>
     <task id="LOCAL-00009" summary="Persist to workspace test 6">
       <created>1572857199295</created>
@@ -492,11 +478,25 @@
       <option name="project" value="LOCAL" />
       <updated>1573683508810</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Use env variable in cache key - 9">
+      <created>1573683955600</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1573683955600</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Use env variable in cache key - 10">
+      <created>1573684124001</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1573684124002</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26876000" />
+    <option name="totallyTimeSpent" value="27312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -526,8 +526,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parameters test 5" />
-    <MESSAGE value="Parameters test 6" />
     <MESSAGE value="Parameters test 7" />
     <MESSAGE value="Parameters test 8" />
     <MESSAGE value="Parameters test 9" />
@@ -551,14 +549,16 @@
     <MESSAGE value="Use env variable in cache key - 6" />
     <MESSAGE value="Use env variable in cache key - 7" />
     <MESSAGE value="Use env variable in cache key - 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 8" />
+    <MESSAGE value="Use env variable in cache key - 9" />
+    <MESSAGE value="Use env variable in cache key - 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 10" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state relative-caret-position="604">
+          <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -44,7 +44,39 @@ commands:
             echo $test_var
           shell: /bin/bash
       - save_cache:
-          key: -v1-test-<< parameters.var1 >>-{{ .Revision }}
+          key: -v1-test-$test_var-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-$test_var-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-{$test_var}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-{$test_var}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-($test_var)-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-{{ $test_var }}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-"$test_var"-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-"${test_var}"-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: -v1-test-"{$BASH_ENV.$test_var}"-{{ .Revision }}
           paths:
             - "~/test_dir"
 
