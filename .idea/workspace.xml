@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="464">
+              <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -146,14 +146,7 @@
       <workItem from="1573577245128" duration="253000" />
       <workItem from="1573585845638" duration="277000" />
       <workItem from="1573628607725" duration="27000" />
-      <workItem from="1573681512415" duration="1147000" />
-    </task>
-    <task id="LOCAL-00001" summary="Workflow test">
-      <created>1571841346572</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1571841346572</updated>
+      <workItem from="1573681512415" duration="1461000" />
     </task>
     <task id="LOCAL-00002" summary="Workspace test">
       <created>1571843030606</created>
@@ -484,14 +477,29 @@
       <option name="project" value="LOCAL" />
       <updated>1573681954216</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Use env variable in cache key - 2">
+      <created>1573682726985</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1573682726985</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Use env variable in cache key - 3">
+      <created>1573682875780</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1573682875781</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25673000" />
+    <option name="totallyTimeSpent" value="25987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -505,7 +513,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4535032" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4535032" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -517,8 +525,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cache test 7" />
-    <MESSAGE value="Cache test 8" />
     <MESSAGE value="Cache test 9" />
     <MESSAGE value="Parameters test 1" />
     <MESSAGE value="Parameters test 2" />
@@ -542,14 +548,16 @@
     <MESSAGE value="get current user - 1" />
     <MESSAGE value="Use env variable in cache key" />
     <MESSAGE value="Use env variable in cache key - 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 1" />
+    <MESSAGE value="Use env variable in cache key - 2" />
+    <MESSAGE value="Use env variable in cache key - 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="464">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
         </state>
       </provider>
     </entry>

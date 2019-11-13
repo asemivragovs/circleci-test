@@ -35,7 +35,10 @@ commands:
             echo "currenr dir-new: $(pwd)"
             mkdir -p test_dir
             echo "test-1" > test_dir/test_file.txt
-            echo "env_var: ${var1}"
+            echo "var1: ${var1}"
+            echo "env_var: ${env_var}"
+            echo "env_var: env_var"
+            echo "env_var: $env_var"
           shell: /bin/bash
       - save_cache:
           key: -v1-test-{{ .Environment.env_var }}-{{ .Revision }}
