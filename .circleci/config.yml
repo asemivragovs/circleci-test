@@ -35,13 +35,13 @@ commands:
             echo "currenr dir-new: $(pwd)"
             mkdir -p test_dir
             echo "test-1" > test_dir/test_file.txt
-            echo "var1: ${var1}"
+            echo "var1: << parameters.var1 >>"
             echo "env_var: ${env_var}"
             echo "env_var: env_var"
             echo "env_var: $env_var"
           shell: /bin/bash
       - save_cache:
-          key: -v1-test-$env_var-{{ .Revision }}
+          key: -v1-test-<< parameters.var1 >>-{{ .Revision }}
           paths:
             - "~/test_dir"
 
