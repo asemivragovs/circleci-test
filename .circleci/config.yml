@@ -39,6 +39,7 @@ commands:
             echo "env_var: ${env_var}"
             echo "env_var: env_var"
             echo "env_var: $env_var"
+            echo $BASH_ENV
           shell: /bin/bash
       - save_cache:
           key: -v1-test-<< parameters.var1 >>-{{ .Revision }}
@@ -96,6 +97,8 @@ jobs:
           name: "Set env var"
           command: |
             echo "env_var: ${env_var}"
+            echo "export test_var=test-var-123" >> $BASH_ENV
+            echo $BASH_ENV
           shell: /bin/bash
       - save_data_1:
           var1: "test-32"
