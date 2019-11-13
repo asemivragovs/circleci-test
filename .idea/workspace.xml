@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="377">
+              <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -64,10 +64,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="586" />
-    <option name="y" value="1463" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="x" value="180" />
+    <option name="y" value="132" />
+    <option name="width" value="1080" />
+    <option name="height" value="659" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -142,7 +142,11 @@
       <workItem from="1573554337528" duration="564000" />
       <workItem from="1573555290776" duration="38000" />
       <workItem from="1573555456207" duration="150000" />
-      <workItem from="1573571679580" duration="589000" />
+      <workItem from="1573571679580" duration="1285000" />
+      <workItem from="1573577245128" duration="253000" />
+      <workItem from="1573585845638" duration="277000" />
+      <workItem from="1573628607725" duration="27000" />
+      <workItem from="1573681512415" duration="142000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow test">
       <created>1571841346572</created>
@@ -459,17 +463,24 @@
       <option name="project" value="LOCAL" />
       <updated>1573572202957</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="get current user - 1">
+      <created>1573572518349</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1573572518349</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23273000" />
+    <option name="totallyTimeSpent" value="24668000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="586" y="1463" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2267525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -493,7 +504,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cache test 4" />
     <MESSAGE value="Cache test 5" />
     <MESSAGE value="Cache test 6" />
     <MESSAGE value="Cache test 7" />
@@ -518,14 +528,15 @@
     <MESSAGE value="Parameters test 17" />
     <MESSAGE value="Parameters test 18" />
     <MESSAGE value="Parameters test 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parameters test 19" />
+    <MESSAGE value="get current user - 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="get current user - 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        <state relative-caret-position="377">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
         </state>
       </provider>
     </entry>

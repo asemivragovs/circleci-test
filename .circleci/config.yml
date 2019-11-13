@@ -15,7 +15,7 @@ commands:
           command: |
             echo "Test command"
             echo "Param: << parameters.should_exit >>"
-            [ << parameters.should_exit >> = true ] && exit 1
+            [ << parameters.should_exit >> = true ] && exit 1 || true
           shell: /bin/bash
 
 jobs:
@@ -58,9 +58,12 @@ jobs:
             echo "Call command"
       - test_command:
           should_exit: true
+
   save_data_1:
     docker:
       - image: circleci/ruby:2.4.1
+    environment:
+      env_var: "env-var-1"
     steps:
       - checkout
       - run: echo "Test 1"
@@ -74,9 +77,10 @@ jobs:
             echo "currenr dir-new: $(pwd)"
             mkdir -p test_dir
             echo "test-1" > test_dir/test_file.txt
+            echo "env_var: ${env_var}"
           shell: /bin/bash
       - save_cache:
-          key: -v1-test{{ arch }}-{{ .Revision }}
+          key: -v1-test{{ env_var }}-{{ .Revision }}
           paths:
             - "~/test_dir"
   save_data_2:
