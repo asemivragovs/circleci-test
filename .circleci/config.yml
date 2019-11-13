@@ -80,7 +80,7 @@ jobs:
             echo "env_var: ${env_var}"
           shell: /bin/bash
       - save_cache:
-          key: -v1-test{{ env_var }}-{{ .Revision }}
+          key: -v1-test-${env_var}-{{ .Revision }}
           paths:
             - "~/test_dir"
   save_data_2:
