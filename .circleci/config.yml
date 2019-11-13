@@ -44,41 +44,53 @@ commands:
             echo $test_var
           shell: /bin/bash
       - save_cache:
-          key: -v1-test-$test_var-{{ .Revision }}
+          key: -v1-test-<< parameters.var1 >>-{{ .Revision }}
           paths:
             - "~/test_dir"
       - save_cache:
-          key: -v1-test-$test_var-{{ .Revision }}
+          key: -v1-test-<< .Environment.test_var >>-{{ .Revision }}
           paths:
             - "~/test_dir"
       - save_cache:
-          key: -v1-test-{$test_var}-{{ .Revision }}
+          key: -v1-test-<< .Environment.$test_var >>-{{ .Revision }}
           paths:
             - "~/test_dir"
-      - save_cache:
-          key: -v1-test-{$test_var}-{{ .Revision }}
-          paths:
-            - "~/test_dir"
-      - save_cache:
-          key: -v1-test-($test_var)-{{ .Revision }}
-          paths:
-            - "~/test_dir"
-      - save_cache:
-          key: -v1-test-{{ $test_var }}-{{ .Revision }}
-          paths:
-            - "~/test_dir"
-      - save_cache:
-          key: -v1-test-"$test_var"-{{ .Revision }}
-          paths:
-            - "~/test_dir"
-      - save_cache:
-          key: -v1-test-"${test_var}"-{{ .Revision }}
-          paths:
-            - "~/test_dir"
-      - save_cache:
-          key: -v1-test-"{$BASH_ENV.$test_var}"-{{ .Revision }}
-          paths:
-            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-$test_var-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-$test_var-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-{$test_var}-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-{$test_var}-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-($test_var)-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-{{ $test_var }}-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-"$test_var"-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-"${test_var}"-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
+#      - save_cache:
+#          key: -v1-test-"{$BASH_ENV.$test_var}"-{{ .Revision }}
+#          paths:
+#            - "~/test_dir"
 
 jobs:
   test_print:
@@ -137,7 +149,7 @@ jobs:
             echo $test_var
           shell: /bin/bash
       - save_data_1:
-          var1: "test-32"
+          var1: test-321
 
   save_data_2:
     docker:
