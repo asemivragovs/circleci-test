@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+            <state relative-caret-position="471">
+              <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -147,14 +146,7 @@
       <workItem from="1573577245128" duration="253000" />
       <workItem from="1573585845638" duration="277000" />
       <workItem from="1573628607725" duration="27000" />
-      <workItem from="1573681512415" duration="2786000" />
-    </task>
-    <task id="LOCAL-00009" summary="Persist to workspace test 6">
-      <created>1572857199295</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1572857199295</updated>
+      <workItem from="1573681512415" duration="3065000" />
     </task>
     <task id="LOCAL-00010" summary="Persist to workspace test 7">
       <created>1572857349552</created>
@@ -492,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573684124002</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Use env variable in cache key - 11">
+      <created>1573684400296</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1573684400296</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27312000" />
+    <option name="totallyTimeSpent" value="27591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -526,7 +525,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parameters test 7" />
     <MESSAGE value="Parameters test 8" />
     <MESSAGE value="Parameters test 9" />
     <MESSAGE value="Parameters test 10" />
@@ -551,14 +549,15 @@
     <MESSAGE value="Use env variable in cache key - 8" />
     <MESSAGE value="Use env variable in cache key - 9" />
     <MESSAGE value="Use env variable in cache key - 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 10" />
+    <MESSAGE value="Use env variable in cache key - 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 11" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        <state relative-caret-position="471">
+          <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
         </state>
       </provider>
     </entry>

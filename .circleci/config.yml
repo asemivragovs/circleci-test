@@ -48,11 +48,11 @@ commands:
           paths:
             - "~/test_dir"
       - save_cache:
-          key: -v1-test-<< .Environment.test_var >>-{{ .Revision }}
+          key: -v1-test-{{ .Environment.test_var }}-{{ .Revision }}
           paths:
             - "~/test_dir"
       - save_cache:
-          key: -v1-test-<< .Environment.$test_var >>-{{ .Revision }}
+          key: -v1-test-{{ .Environment.$test_var }}-{{ .Revision }}
           paths:
             - "~/test_dir"
 #      - save_cache:
