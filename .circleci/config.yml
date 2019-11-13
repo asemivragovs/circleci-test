@@ -98,7 +98,7 @@ jobs:
             echo "env_var: ${env_var}"
           shell: /bin/bash
       - save_data_1:
-          var1: ${env_var_123}
+          var1: "test-32"
 
   save_data_2:
     docker:
