@@ -18,6 +18,30 @@ commands:
             [ << parameters.should_exit >> = true ] && exit 1 || true
           shell: /bin/bash
 
+  save_data_1:
+    parameters:
+      var1:
+        type: string
+    steps:
+      - checkout
+      - run: echo "Test 1"
+      - restore_cache:
+          key: -v1-test{{ arch }}-{{ .Revision }}
+      - run:
+          name: Build Voice CPP slave
+          command: |
+            echo "currenr dir: $(pwd)"
+            cd ~
+            echo "currenr dir-new: $(pwd)"
+            mkdir -p test_dir
+            echo "test-1" > test_dir/test_file.txt
+            echo "env_var: ${var1}"
+          shell: /bin/bash
+      - save_cache:
+          key: -v1-test-${var1}-{{ .Revision }}
+          paths:
+            - "~/test_dir"
+
 jobs:
   test_print:
     docker:
@@ -59,30 +83,20 @@ jobs:
       - test_command:
           should_exit: true
 
-  save_data_1:
+  set_env_var:
     docker:
       - image: circleci/ruby:2.4.1
     environment:
       env_var: "env-var-1"
     steps:
-      - checkout
-      - run: echo "Test 1"
-      - restore_cache:
-          key: -v1-test{{ arch }}-{{ .Revision }}
       - run:
-          name: Build Voice CPP slave
+          name: "Set env var"
           command: |
-            echo "currenr dir: $(pwd)"
-            cd ~
-            echo "currenr dir-new: $(pwd)"
-            mkdir -p test_dir
-            echo "test-1" > test_dir/test_file.txt
             echo "env_var: ${env_var}"
           shell: /bin/bash
-      - save_cache:
-          key: -v1-test-${env_var}-{{ .Revision }}
-          paths:
-            - "~/test_dir"
+      - save_data_1:
+          var1: ${env_var}
+
   save_data_2:
     docker:
       - image: circleci/redis:5.0.0-32bit
@@ -201,16 +215,16 @@ workflows:
   version: 2
   test_workspace:
     jobs:
+      - set_env_var
       - test_print
       - call_command_1
       - call_command_2
       - call_command_3
-      - save_data_1
       - save_data_2
       - save_data_3
       - check_data_1:
           requires:
-            - save_data_1
+            - set_env_var
       - check_data_2:
           requires:
             - save_data_2
