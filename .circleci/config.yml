@@ -90,7 +90,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1
     environment:
-      env_var: "env-var-1"
+      env_var_123: "env-var-1"
     steps:
       - run:
           name: "Set env var"
@@ -98,7 +98,7 @@ jobs:
             echo "env_var: ${env_var}"
           shell: /bin/bash
       - save_data_1:
-          var1: ${env_var}
+          var1: ${env_var_123}
 
   save_data_2:
     docker:
