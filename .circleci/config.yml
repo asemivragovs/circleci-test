@@ -41,7 +41,7 @@ commands:
             echo "env_var: $env_var"
           shell: /bin/bash
       - save_cache:
-          key: -v1-test-{{ .Environment.env_var }}-{{ .Revision }}
+          key: -v1-test-$env_var-{{ .Revision }}
           paths:
             - "~/test_dir"
 
