@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
+            <state relative-caret-position="577">
+              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -50,6 +51,7 @@
       <find>parameters</find>
       <find>parameters.should_exit</find>
       <find>env_var_123</find>
+      <find>test-321</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,21 +148,10 @@
       <workItem from="1573577245128" duration="253000" />
       <workItem from="1573585845638" duration="277000" />
       <workItem from="1573628607725" duration="27000" />
-      <workItem from="1573681512415" duration="3065000" />
-    </task>
-    <task id="LOCAL-00010" summary="Persist to workspace test 7">
-      <created>1572857349552</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1572857349552</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Persist to workspace test 8">
-      <created>1572857430117</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1572857430117</updated>
+      <workItem from="1573681512415" duration="3409000" />
+      <workItem from="1573714130131" duration="2892000" />
+      <workItem from="1573749994225" duration="333000" />
+      <workItem from="1573765837528" duration="309000" />
     </task>
     <task id="LOCAL-00012" summary="Persist to workspace test 9">
       <created>1572857853507</created>
@@ -491,17 +482,31 @@
       <option name="project" value="LOCAL" />
       <updated>1573684400296</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Use env variable in cache key - 12">
+      <created>1573684684285</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1573684684285</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Use env variable in cache key - 12-fix">
+      <created>1573684745223</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1573684745223</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27591000" />
+    <option name="totallyTimeSpent" value="31469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21316166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -525,8 +530,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parameters test 8" />
-    <MESSAGE value="Parameters test 9" />
     <MESSAGE value="Parameters test 10" />
     <MESSAGE value="Parameters test 11" />
     <MESSAGE value="Parameters test 12" />
@@ -550,14 +553,16 @@
     <MESSAGE value="Use env variable in cache key - 9" />
     <MESSAGE value="Use env variable in cache key - 10" />
     <MESSAGE value="Use env variable in cache key - 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 11" />
+    <MESSAGE value="Use env variable in cache key - 12" />
+    <MESSAGE value="Use env variable in cache key - 12-fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use env variable in cache key - 12-fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="151" column="24" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
+        <state relative-caret-position="577">
+          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
         </state>
       </provider>
     </entry>
