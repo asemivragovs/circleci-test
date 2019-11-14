@@ -57,13 +57,13 @@ commands:
             - "~/test_dir"
       - save_cache:
           key: >
-            -v1-test-{{ .Environment.$test_var }}-{{ .Revision }}
+            -v1-test-{{ arch }}-{{ .Revision }}
             -super-long-key-test-yaml-123-qwertyu-001
           paths:
             - "~/test_dir"
       - save_cache:
           key: >-
-            -v1-test-{{ .Environment.$test_var }}-{{ .Revision }}
+            -v1-test-{{ arch }}-{{ .Revision }}
             -super-long-key-test-yaml-123-qwertyu-002
           paths:
             - "~/test_dir"
