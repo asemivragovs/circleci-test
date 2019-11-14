@@ -57,14 +57,25 @@ commands:
             - "~/test_dir"
       - save_cache:
           key: >
-            -v1-test-{{ arch }}-{{ .Revision }}
-            -super-long-key-test-yaml-123-qwertyu-001
+            "-v1-test-{{ arch }}-{{ .Revision }}\
+            -super-long-key-test-yaml-123-qwertyu-001"
           paths:
             - "~/test_dir"
       - save_cache:
           key: >-
-            -v1-test-{{ arch }}-{{ .Revision }}
-            -super-long-key-test-yaml-123-qwertyu-002
+            "-v1-test-{{ arch }}-{{ .Revision }}\
+            -super-long-key-test-yaml-123-qwertyu-002"
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key:
+            "-v1-test-{{ arch }}-{{ .Revision }}\
+            -super-long-key-test-yaml-123-qwertyu-003"
+          paths:
+            - "~/test_dir"
+      - save_cache:
+          key: "-v1-test-{{ arch }}-{{ .Revision }}\
+            -super-long-key-test-yaml-123-qwertyu-004"
           paths:
             - "~/test_dir"
 #      - save_cache:
