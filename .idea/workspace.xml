@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="330">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -62,14 +62,13 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1417" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,6 +85,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,14 +152,9 @@
       <workItem from="1573936032299" duration="449000" />
       <workItem from="1573979632139" duration="505000" />
       <workItem from="1574146617405" duration="216000" />
-      <workItem from="1582797000313" duration="545000" />
-    </task>
-    <task id="LOCAL-00016" summary="Persist to workspace test 13">
-      <created>1572859148232</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1572859148232</updated>
+      <workItem from="1582797000313" duration="1705000" />
+      <workItem from="1582831740435" duration="1154000" />
+      <workItem from="1582836052073" duration="113000" />
     </task>
     <task id="LOCAL-00017" summary="Persist to workspace test 14">
       <created>1572859650992</created>
@@ -497,17 +492,24 @@
       <option name="project" value="LOCAL" />
       <updated>1573768431649</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Parameter test 1">
+      <created>1582797635151</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1582797635154</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37234000" />
+    <option name="totallyTimeSpent" value="39661000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23550437" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -519,7 +521,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4528302" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4522293" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -531,7 +533,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parameters test 14" />
     <MESSAGE value="Parameters test 15" />
     <MESSAGE value="Parameters test 16" />
     <MESSAGE value="Parameters test 17" />
@@ -556,7 +557,8 @@
     <MESSAGE value="Line break long cache key - 1" />
     <MESSAGE value="Line break long cache key - 2" />
     <MESSAGE value="Line break long cache key - 2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Line break long cache key - 2.1" />
+    <MESSAGE value="Parameter test 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parameter test 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -565,8 +567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>

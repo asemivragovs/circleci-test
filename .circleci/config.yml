@@ -6,21 +6,26 @@ version: 2.1
 commands:
   test_command:
     parameters:
-      test_param:
-        type: string
-        default: "default-1"
+      gcc_version:
+        type: integer
+        default: 8
     steps:
       - run:
           name: "Test command"
           command: |
             echo "Test command"
-            echo "Param: << parameters.test_param >>"
+            echo "Param: << parameters.gcc_version >>"
+            sudo apt update
+            sudo apt install -y g++-<< parameters.gcc_version >>
+            echo "gcc version 1: $(gcc -v)"
+            echo ""
+            echo "gcc version 2: $(g++ -v)"
           shell: /bin/bash
 
 jobs:
   test_1:
-    docker:
-      - image: circleci/node:4.8.2
+    machine:
+      image: ubuntu-1604:201903-01
     steps:
       - run:
           name: "Test job"
@@ -28,7 +33,7 @@ jobs:
             echo "Call test_command"
           shell: /bin/bash
       - test_command:
-          test_param: "test-123"
+          gcc_version: 9
 
 workflows:
   version: 2
