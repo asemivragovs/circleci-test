@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+            <state relative-caret-position="234">
+              <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -46,6 +46,7 @@
       <find>test-321</find>
       <find>save_data_1</find>
       <find>test_param</find>
+      <find>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 100 --slave /usr/bin/g++ g++ /usr/bin/g++-8</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,21 +155,7 @@
       <workItem from="1574146617405" duration="216000" />
       <workItem from="1582797000313" duration="1705000" />
       <workItem from="1582831740435" duration="1154000" />
-      <workItem from="1582836052073" duration="845000" />
-    </task>
-    <task id="LOCAL-00019" summary="Cache test 1">
-      <created>1572900995548</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1572900995548</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Cache test 2">
-      <created>1572901668312</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1572901668312</updated>
+      <workItem from="1582836052073" duration="1431000" />
     </task>
     <task id="LOCAL-00021" summary="Cache test 4">
       <created>1572902227300</created>
@@ -499,11 +486,25 @@
       <option name="project" value="LOCAL" />
       <updated>1582836441620</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Parameter test gcc 2">
+      <created>1582836916938</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1582836916938</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Parameter test gcc 3">
+      <created>1582837172077</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1582837172077</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40393000" />
+    <option name="totallyTimeSpent" value="40979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -533,8 +534,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parameters test 17" />
-    <MESSAGE value="Parameters test 18" />
     <MESSAGE value="Parameters test 19" />
     <MESSAGE value="get current user - 1" />
     <MESSAGE value="Use env variable in cache key" />
@@ -558,7 +557,9 @@
     <MESSAGE value="Parameter test 1" />
     <MESSAGE value="Parameter test gcc" />
     <MESSAGE value="Parameter test gcc 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parameter test gcc 1" />
+    <MESSAGE value="Parameter test gcc 2" />
+    <MESSAGE value="Parameter test gcc 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parameter test gcc 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -567,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        <state relative-caret-position="234">
+          <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
         </state>
       </provider>
     </entry>
