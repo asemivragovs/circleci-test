@@ -47,7 +47,7 @@ jobs:
             echo "Call test_command"
           shell: /bin/bash
       - test_command:
-          gcc_version: 9
+          gcc_version: 8
 
 workflows:
   version: 2
