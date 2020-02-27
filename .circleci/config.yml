@@ -16,7 +16,9 @@ commands:
             echo "Test command"
             echo "Param: << parameters.gcc_version >>"
             sudo apt update
-            sudo apt install -y g++-<< parameters.gcc_version >>
+            sudo apt install -y uuid-dev libx11-dev openjdk-8-jdk g++-9
+            sudo apt remove g++-5 gcc-5
+            sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 --slave /usr/bin/g++ g++ /usr/bin/g++-9
             echo "gcc version 1: $(gcc -v)"
             echo ""
             echo "gcc version 2: $(g++ -v)"
