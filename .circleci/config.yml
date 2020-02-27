@@ -14,12 +14,15 @@ commands:
           name: "Test command"
           command: |
             echo "Test command"
-            echo "Param: << parameters.gcc_version >>"
+            echo "gcc version 0: $(gcc -v)"
+            echo ""
+            echo "gcc version 02: $(g++ -v)"
+            echo "Param: g++-<< parameters.gcc_version >>"
             sudo add-apt-repository ppa:ubuntu-toolchain-r/test
             sudo apt update
-            sudo apt install -y uuid-dev libx11-dev openjdk-8-jdk g++-9
+            sudo apt install -y uuid-dev libx11-dev openjdk-8-jdk g++-<< parameters.gcc_version >>
             sudo apt remove g++-5 gcc-5
-            sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+            sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-<< parameters.gcc_version >> 100 --slave /usr/bin/g++ g++ /usr/bin/g++-<< parameters.gcc_version >>
             echo "gcc version 1: $(gcc -v)"
             echo ""
             echo "gcc version 2: $(g++ -v)"
