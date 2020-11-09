@@ -93,7 +93,7 @@ commands:
       - run:
           name: "Test command 1 name"
           command: |
-            date-dfdg
+            cd /tehrto
             status=$?
             echo $status
             if [[ $status -eq 0 ]]; then
@@ -151,6 +151,7 @@ commands:
           command: |
             date-dfdg
             echo "export status_3_1=$?" >> $BASH_ENV
+            source $BASH_ENV
             echo "export status: $status_3_1"
           shell: /bin/bash
       - check_exit_code_1:
@@ -163,7 +164,7 @@ commands:
           name: "Test command 4 name"
           command: |
             set +e
-            date-dfdg
+            cd /ergerio
             export status_4=$?
             echo "export status: $status_4"
       - check_exit_code_2
@@ -175,8 +176,9 @@ commands:
           name: "Test command 4 name"
           command: |
             set +e
-            date-dfdg
+            cd /ergoier
             echo "export status_4_1=$?" >> $BASH_ENV
+            source $BASH_ENV
             echo "export status: $status_4_1"
       - check_exit_code_3
 
@@ -235,7 +237,7 @@ workflows:
       - test_1
 #      - test_2
 #      - test_2_1
-      - test_3
+#      - test_3
       - test_3_1
-      - test_4
+#      - test_4
       - test_4_1
