@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="445">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
             </state>
           </provider>
         </entry>
@@ -34,19 +34,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>job</find>
-      <find>key: -v1-test{{ arch }}-{{ .Revision }}</find>
-      <find>circleci/redis</find>
-      <find>should_exit</find>
-      <find>call_command_4</find>
-      <find>test_command</find>
-      <find>parameters</find>
-      <find>parameters.should_exit</find>
-      <find>env_var_123</find>
-      <find>test-321</find>
-      <find>save_data_1</find>
-      <find>test_param</find>
-      <find>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 100 --slave /usr/bin/g++ g++ /usr/bin/g++-8</find>
+      <find>status_1</find>
+      <find>*check_status_1</find>
+      <find>&lt;&lt;: *</find>
+      <find>cache-key</find>
+      <find>test_2</find>
+      <find>check_status_1</find>
+      <find>test_command_2</find>
+      <find>test_2_1</find>
+      <find>test_command_2_1</find>
+      <find>check_status_2</find>
+      <find>test_3</find>
+      <find>test_command_3</find>
+      <find>exit_code</find>
+      <find>test_3_1</find>
+      <find>test_command_3_1</find>
+      <find>check_exit_code_1</find>
+      <find>test_4</find>
+      <find>test_command_4</find>
+      <find>check_exit_code_2</find>
+      <find>status_4</find>
+      <find>test_4_1</find>
+      <find>test_command_4_1</find>
+      <find>check_exit_code_3</find>
+      <find>status_4_1</find>
+      <find>status_3_1</find>
+      <find>3_1</find>
+      <find>4_1</find>
+      <find>test_1</find>
+      <find>test_command_1</find>
+      <find>export</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,9 +77,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2560" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -70,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,7 +104,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,21 +172,9 @@
       <workItem from="1574146617405" duration="216000" />
       <workItem from="1582797000313" duration="1705000" />
       <workItem from="1582831740435" duration="1154000" />
-      <workItem from="1582836052073" duration="1464000" />
-    </task>
-    <task id="LOCAL-00023" summary="Cache test 6">
-      <created>1572902598743</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1572902598743</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Cache test 7">
-      <created>1572902787982</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1572902787982</updated>
+      <workItem from="1582836052073" duration="2211000" />
+      <workItem from="1582872743330" duration="352000" />
+      <workItem from="1604913683502" duration="3729000" />
     </task>
     <task id="LOCAL-00025" summary="Cache test 8">
       <created>1572903339661</created>
@@ -500,19 +505,34 @@
       <option name="project" value="LOCAL" />
       <updated>1582837524173</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Parameter test gcc 6">
+      <created>1582837534604</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1582837534604</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Test exit code">
+      <created>1604918757910</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1604918757910</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41012000" />
+    <option name="totallyTimeSpent" value="45840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -522,7 +542,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4522293" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.41401273" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -534,8 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Use env variable in cache key" />
-    <MESSAGE value="Use env variable in cache key - 1" />
     <MESSAGE value="Use env variable in cache key - 2" />
     <MESSAGE value="Use env variable in cache key - 3" />
     <MESSAGE value="Use env variable in cache key - 4" />
@@ -559,17 +577,30 @@
     <MESSAGE value="Parameter test gcc 3" />
     <MESSAGE value="Parameter test gcc 4" />
     <MESSAGE value="Parameter test gcc 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parameter test gcc 5" />
+    <MESSAGE value="Parameter test gcc 6" />
+    <MESSAGE value="Test exit code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test exit code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/requirements/dev.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/E-se-bob.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="445">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
         </state>
       </provider>
     </entry>
