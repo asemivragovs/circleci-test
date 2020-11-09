@@ -166,6 +166,8 @@ commands:
             else
               echo "Pass"
             fi
+          shell: /bin/bash
+          when: always
 
   test_command_4:
     description: Test command 4 description
@@ -203,6 +205,8 @@ commands:
             else
               echo "Pass"
             fi
+          shell: /bin/bash
+          when: always
 jobs:
   test_1:
     machine:
