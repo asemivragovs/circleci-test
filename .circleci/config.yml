@@ -147,7 +147,7 @@ commands:
       - run:
           name: "Test command 3 name"
           command: |
-            cd /rtkr
+            date-et
             echo "export status_3_1=$?" >> $BASH_ENV
             source $BASH_ENV
             echo "export status: $status_3_1"
@@ -157,7 +157,7 @@ commands:
       - run:
           name: "Check status after"
           command: |
-            echo "Status: $status_3_1"
+            echo "Status 3_1: $status_3_1"
             echo "Status 4_1: $status_4_1"
             echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
             if [ $UNEXPECTED_FAILURES = true ]; then
@@ -188,7 +188,7 @@ commands:
           name: "Test command 4 name"
           command: |
             set +e
-            cd /ergoier
+            date-et
             echo "export status_4_1=$?" >> $BASH_ENV
             source $BASH_ENV
             echo "export status: $status_4_1"
@@ -259,7 +259,7 @@ workflows:
   version: 2
   test_workflow:
     jobs:
-      - test_1
+#      - test_1
 #      - test_2
 #      - test_2_1
 #      - test_3
