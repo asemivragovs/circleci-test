@@ -153,6 +153,7 @@ commands:
             echo "Yes"
             else
             echo "No"
+            exit 1
             fi
             TEST_EXIT_CODE=1
             var1=true
@@ -175,6 +176,12 @@ commands:
             else
             echo "No"
             fi
+      - run:
+          name: "After step"
+          command: |
+            echo "Test after failed"
+          when: always
+          shell: /bin/bash
 #      - run:
 #          name: "Test command 3 name"
 #          command: |
