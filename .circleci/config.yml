@@ -37,14 +37,13 @@ commands:
           name: "Check exit code 1 name"
           command: |
             echo "Status: << parameters.exit_code >>"
-            if [[ << parameters.exit_code >> -eq 0 ]]; then
-              echo "Exit code is 0 - Pass"
-              exit 0
-            elif [[ << parameters.exit_code >> -eq 127 ]]; then
-              echo "Exit code is 127 - Known issue"
+            if [ << parameters.exit_code >> -eq 0 ] || [ << parameters.exit_code >> -eq 127 ]; then
+              echo "Exit code is OK - Pass"
+              echo "export UNEXPECTED_FAILURES=false" >> $BASH_ENV
               exit 0
             else
               echo "Unexpected exit code: << parameters.exit_code >> - Fail"
+              echo "export UNEXPECTED_FAILURES=true" >> $BASH_ENV
               exit 1
             fi
           shell: /bin/bash
@@ -75,14 +74,13 @@ commands:
           name: "Check exit code 3 name"
           command: |
             echo "Status: $status_4_1"
-            if [[ $status_4_1 -eq 0 ]]; then
-              echo "Exit code is 0 - Pass"
-              exit 0
-            elif [[ $status_4_1 -eq 127 ]]; then
-              echo "Exit code is 127 - Known issue"
+            if [ $status_4_1 -eq 0 ] || [ $status_4_1 -eq 127 ]; then
+              echo "Exit code is OK - Pass"
+              echo "export UNEXPECTED_FAILURES=false" >> $BASH_ENV
               exit 0
             else
               echo "Unexpected exit code: $status_4_1 - Fail"
+              echo "export UNEXPECTED_FAILURES=true" >> $BASH_ENV
               exit 1
             fi
           shell: /bin/bash
@@ -149,13 +147,25 @@ commands:
       - run:
           name: "Test command 3 name"
           command: |
-            date-dfdg
+            cd /rtkr
             echo "export status_3_1=$?" >> $BASH_ENV
             source $BASH_ENV
             echo "export status: $status_3_1"
           shell: /bin/bash
       - check_exit_code_1:
           exit_code: $status_3_1
+      - run:
+          name: "Check status after"
+          command: |
+            echo "Status: $status_3_1"
+            echo "Status 4_1: $status_4_1"
+            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
+            if [ $UNEXPECTED_FAILURES = true ]; then
+              echo "Fail"
+              exit 1
+            else
+              echo "Pass"
+            fi
 
   test_command_4:
     description: Test command 4 description
@@ -181,7 +191,18 @@ commands:
             source $BASH_ENV
             echo "export status: $status_4_1"
       - check_exit_code_3
-
+      - run:
+          name: "Check status after"
+          command: |
+            echo "Status 3_1: $status_3_1"
+            echo "Status 4_1: $status_4_1"
+            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
+            if [ $UNEXPECTED_FAILURES = true ]; then
+              echo "Fail"
+              exit 1
+            else
+              echo "Pass"
+            fi
 jobs:
   test_1:
     machine:

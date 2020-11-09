@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+            <state relative-caret-position="437">
+              <caret line="213" column="36" lean-forward="true" selection-start-line="213" selection-start-column="36" selection-end-line="213" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -34,7 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status_1</find>
       <find>*check_status_1</find>
       <find>&lt;&lt;: *</find>
       <find>cache-key</find>
@@ -49,7 +48,6 @@
       <find>exit_code</find>
       <find>test_3_1</find>
       <find>test_command_3_1</find>
-      <find>check_exit_code_1</find>
       <find>test_4</find>
       <find>test_command_4</find>
       <find>check_exit_code_2</find>
@@ -64,6 +62,8 @@
       <find>test_1</find>
       <find>test_command_1</find>
       <find>export</find>
+      <find>check_exit_code_1</find>
+      <find>tatus_4_1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,21 +174,7 @@
       <workItem from="1582831740435" duration="1154000" />
       <workItem from="1582836052073" duration="2211000" />
       <workItem from="1582872743330" duration="352000" />
-      <workItem from="1604913683502" duration="3729000" />
-    </task>
-    <task id="LOCAL-00025" summary="Cache test 8">
-      <created>1572903339661</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1572903339661</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Cache test 9">
-      <created>1572903454929</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1572903454929</updated>
+      <workItem from="1604913683502" duration="4854000" />
     </task>
     <task id="LOCAL-00027" summary="Parameters test 1">
       <created>1573319285249</created>
@@ -519,11 +505,25 @@
       <option name="project" value="LOCAL" />
       <updated>1604918757910</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Test exit code 1">
+      <created>1604919266471</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1604919266472</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Test exit code 2">
+      <created>1604920934855</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1604920934855</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45840000" />
+    <option name="totallyTimeSpent" value="46965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -554,8 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Use env variable in cache key - 2" />
-    <MESSAGE value="Use env variable in cache key - 3" />
     <MESSAGE value="Use env variable in cache key - 4" />
     <MESSAGE value="Use env variable in cache key - 5" />
     <MESSAGE value="Use env variable in cache key - 6" />
@@ -579,7 +577,9 @@
     <MESSAGE value="Parameter test gcc 5" />
     <MESSAGE value="Parameter test gcc 6" />
     <MESSAGE value="Test exit code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test exit code" />
+    <MESSAGE value="Test exit code 1" />
+    <MESSAGE value="Test exit code 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test exit code 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -599,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+        <state relative-caret-position="437">
+          <caret line="213" column="36" lean-forward="true" selection-start-line="213" selection-start-column="36" selection-end-line="213" selection-end-column="36" />
         </state>
       </provider>
     </entry>
