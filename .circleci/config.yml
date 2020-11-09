@@ -145,29 +145,60 @@ commands:
     description: Test command 3 description
     steps:
       - run:
-          name: "Test command 3 name"
+          name: "Run"
           command: |
-            date-et
-            echo "export status_3_1=$?" >> $BASH_ENV
-            source $BASH_ENV
-            echo "export status: $status_3_1"
-          shell: /bin/bash
-      - check_exit_code_1:
-          exit_code: $status_3_1
-      - run:
-          name: "Check status after"
-          command: |
-            echo "Status 3_1: $status_3_1"
-            echo "Status 4_1: $status_4_1"
-            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
-            if [ $UNEXPECTED_FAILURES = true ]; then
-              echo "Fail"
-              exit 1
+            TEST_EXIT_CODE=4
+            var1=true
+            if [ "$var1" = true ] && [ "$TEST_EXIT_CODE" -ne 0 ] && [ "$TEST_EXIT_CODE" -ne 4 ]; then
+            echo "Yes"
             else
-              echo "Pass"
+            echo "No"
             fi
-          shell: /bin/bash
-          when: always
+            TEST_EXIT_CODE=1
+            var1=true
+            if [ "$var1" = true ] && [ "$TEST_EXIT_CODE" -ne 0 ] && [ "$TEST_EXIT_CODE" -ne 4 ]; then
+            echo "Yes"
+            else
+            echo "No"
+            fi
+            TEST_EXIT_CODE=4
+            var1=true
+            if [[ "$var1" = true && "$TEST_EXIT_CODE" -ne 0 && "$TEST_EXIT_CODE" -ne 4 ]]; then
+            echo "Yes"
+            else
+            echo "No"
+            fi
+            TEST_EXIT_CODE=1
+            var1=true
+            if [[ "$var1" = true && "$TEST_EXIT_CODE" -ne 0 && "$TEST_EXIT_CODE" -ne 4 ]]; then
+            echo "Yes"
+            else
+            echo "No"
+            fi
+#      - run:
+#          name: "Test command 3 name"
+#          command: |
+#            date-et
+#            echo "export status_3_1=$?" >> $BASH_ENV
+#            source $BASH_ENV
+#            echo "export status: $status_3_1"
+#          shell: /bin/bash
+#      - check_exit_code_1:
+#          exit_code: $status_3_1
+#      - run:
+#          name: "Check status after"
+#          command: |
+#            echo "Status 3_1: $status_3_1"
+#            echo "Status 4_1: $status_4_1"
+#            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
+#            if [ $UNEXPECTED_FAILURES = true ]; then
+#              echo "Fail"
+#              exit 1
+#            else
+#              echo "Pass"
+#            fi
+#          shell: /bin/bash
+#          when: always
 
   test_command_4:
     description: Test command 4 description
@@ -265,4 +296,4 @@ workflows:
 #      - test_3
       - test_3_1
 #      - test_4
-      - test_4_1
+#      - test_4_1
