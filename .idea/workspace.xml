@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="618">
+              <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -34,15 +33,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>check_status_2</find>
-      <find>test_3</find>
-      <find>exit_code</find>
-      <find>test_3_1</find>
-      <find>test_command_3_1</find>
-      <find>test_4</find>
-      <find>test_command_4</find>
-      <find>check_exit_code_2</find>
-      <find>status_4</find>
       <find>test_4_1</find>
       <find>test_command_4_1</find>
       <find>check_exit_code_3</find>
@@ -59,11 +49,20 @@
       <find>test_command_2</find>
       <find>TEST_VAR_1</find>
       <find>test_command_3</find>
-      <find>TEST_VAR_2</find>
       <find>$TEST_VAR_1</find>
       <find>$TEST_VAR_3</find>
-      <find>TEST_VAR</find>
       <find>$TEST_VAR</find>
+      <find>Test job 1 name</find>
+      <find>Test job 1</find>
+      <find>Test command 1 run 1 name</find>
+      <find>test_234</find>
+      <find>Test command 2 name</find>
+      <find>test_236</find>
+      <find>test_235</find>
+      <find>test_237</find>
+      <find>TEST_VAR_3</find>
+      <find>TEST_VAR</find>
+      <find>TEST_VAR_2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,14 +181,7 @@
       <workItem from="1605345961387" duration="599000" />
       <workItem from="1605513183552" duration="597000" />
       <workItem from="1605690755871" duration="492000" />
-      <workItem from="1605859809916" duration="2731000" />
-    </task>
-    <task id="LOCAL-00032" summary="Parameters test 6">
-      <created>1573319916850</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1573319916850</updated>
+      <workItem from="1605859809916" duration="3136000" />
     </task>
     <task id="LOCAL-00033" summary="Parameters test 7">
       <created>1573319968484</created>
@@ -527,11 +519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1604936465091</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Test env vars">
+      <created>1606166713286</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1606166713287</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59627000" />
+    <option name="totallyTimeSpent" value="60032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -562,7 +561,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Use env variable in cache key - 9" />
     <MESSAGE value="Use env variable in cache key - 10" />
     <MESSAGE value="Use env variable in cache key - 11" />
     <MESSAGE value="Use env variable in cache key - 12" />
@@ -587,7 +585,8 @@
     <MESSAGE value="Test exit code 5" />
     <MESSAGE value="Test exit code 6" />
     <MESSAGE value="Test exit code 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test exit code 7" />
+    <MESSAGE value="Test env vars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test env vars" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -605,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="618">
+          <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
         </state>
       </provider>
     </entry>

@@ -10,11 +10,7 @@ commands:
             echo 'export TEST_VAR="test_234"' >> $BASH_ENV
             echo "test var: $TEST_VAR"
           shell: /bin/bash
-      - run:
-          name: "Test command 1 run 2 name"
-          command: |
-            echo "test var no source: $TEST_VAR"
-          shell: /bin/bash
+      - test_command_2
 
   test_command_2:
     description: Test command 2 description
@@ -23,9 +19,7 @@ commands:
           name: "Test command 2 name"
           command: |
             echo "test var no source: $TEST_VAR"
-            echo 'export TEST_VAR_1="test_235"' >> $BASH_ENV
             source $BASH_ENV
-            echo "test var 1: $TEST_VAR_1"
             echo "test var with source: $TEST_VAR"
           shell: /bin/bash
 
@@ -36,16 +30,8 @@ commands:
           name: "Test command 3 run 1 name"
           command: |
             echo 'export TEST_VAR_2="test_236"' >> $BASH_ENV
-            echo "test var: $TEST_VAR"
-            echo "test var 1: $TEST_VAR_1"
-            echo "test var 2: $TEST_VAR_2"
           shell: /bin/bash
-      - run:
-          name: "Test command 3 run 2 name"
-          command: |
-            source $BASH_ENV
-            echo "test var with source: $TEST_VAR_2"
-          shell: /bin/bash
+      - test_command_4
 
   test_command_4:
     description: Test command 4 description
@@ -53,13 +39,12 @@ commands:
       - run:
           name: "Test command 4 run 1 name"
           command: |
-            echo 'export TEST_VAR_3="test_237"' >> $BASH_ENV
-            echo "test var: $TEST_VAR_3"
+            echo "test var: $TEST_VAR_2"
           shell: /bin/bash
       - run:
           name: "Test command 4 run 2 name"
           command: |
-            echo "test var no source: $TEST_VAR_3"
+            echo "test var: $TEST_VAR_2"
           shell: /bin/bash
 
 jobs:
@@ -112,8 +97,4 @@ workflows:
   test_workflow:
     jobs:
       - test_1
-      - test_2:
-          requires:
-            - test_1
       - test_3
-      - test_4
