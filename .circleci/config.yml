@@ -1,259 +1,76 @@
 version: 2.1
 
-aliases:
-  - &check_status_1
-      echo $status_1
-      if [[ $status_1 -eq 0 ]]; then
-        echo "Exit code is 0 - Pass"
-        exit 0
-      elif [[ $status_1 -eq 127 ]]; then
-        echo "Exit code is 127 - Known issue"
-        exit 0
-      else
-        exit 1
-      fi
-
-  - &check_status_2
-      echo $status_2
-      if [[ $status_2 -eq 0 ]]; then
-      echo "Exit code is 0 - Pass"
-      exit 0
-      elif [[ $status_2 -eq 127 ]]; then
-      echo "Exit code is 127 - Known issue"
-      exit 0
-      else
-      exit 1
-      fi
-
-
 commands:
-  check_exit_code_1:
-    description: Check exit code 1 description
-    parameters:
-      exit_code:
-        type: string
-    steps:
-      - run:
-          name: "Check exit code 1 name"
-          command: |
-            echo "Status: << parameters.exit_code >>"
-            if [ << parameters.exit_code >> -eq 0 ] || [ << parameters.exit_code >> -eq 127 ]; then
-              echo "Exit code is OK - Pass"
-              echo "export UNEXPECTED_FAILURES=false" >> $BASH_ENV
-              exit 0
-            else
-              echo "Unexpected exit code: << parameters.exit_code >> - Fail"
-              echo "export UNEXPECTED_FAILURES=true" >> $BASH_ENV
-              exit 1
-            fi
-          shell: /bin/bash
-
-  check_exit_code_2:
-    description: Check exit code 2 description
-    steps:
-      - run:
-          name: "Check exit code 2 name"
-          command: |
-            echo "Status: $status_4"
-            if [[ $status_4 -eq 0 ]]; then
-              echo "Exit code is 0 - Pass"
-              exit 0
-            elif [[ $status_4 -eq 127 ]]; then
-              echo "Exit code is 127 - Known issue"
-              exit 0
-            else
-              echo "Unexpected exit code: $status_4 - Fail"
-              exit 1
-            fi
-          shell: /bin/bash
-
-  check_exit_code_3:
-    description: Check exit code 3 description
-    steps:
-      - run:
-          name: "Check exit code 3 name"
-          command: |
-            echo "Status: $status_4_1"
-            if [ $status_4_1 -eq 0 ] || [ $status_4_1 -eq 127 ]; then
-              echo "Exit code is OK - Pass"
-              echo "export UNEXPECTED_FAILURES=false" >> $BASH_ENV
-              exit 0
-            else
-              echo "Unexpected exit code: $status_4_1 - Fail"
-              echo "export UNEXPECTED_FAILURES=true" >> $BASH_ENV
-              exit 1
-            fi
-          shell: /bin/bash
-
   test_command_1:
     description: Test command 1 description
     steps:
       - run:
-          name: "Test command 1 name"
+          name: "Test command 1 run 1 name"
           command: |
-            cd /tehrto
-            status=$?
-            echo $status
-            if [[ $status -eq 0 ]]; then
-              echo "Exit code is 0 - Pass"
-              exit 0
-            elif [[ $status -eq 127 ]]; then
-              echo "Exit code is 127 - Known issue"
-              exit 0
-            else
-              echo "Unexpected exit code: $status - Fail"
-              exit 1
-            fi
+            echo 'export TEST_VAR="test_234"' >> $BASH_ENV
+            echo "test var: $TEST_VAR"
+          shell: /bin/bash
+      - run:
+          name: "Test command 1 run 2 name"
+          command: |
+            echo "test var no source: $TEST_VAR"
           shell: /bin/bash
 
-#  test_command_2:
-#    description: Test command 2 description
-#    steps:
-#      - run:
-#          name: "Test command 2 name"
-#          command: |
-#            date-dfdg
-#            export status_1=$?
-#            <<: *check_status_1
-#          shell: /bin/bash
-#
-#  test_command_2_1:
-#    description: Test command 2 description
-#    steps:
-#      - run:
-#          name: "Test command 2 name"
-#          command: |
-#            date-dfdg
-#            echo "export status_2=$?" >> $BASH_ENV
-#            <<: *check_status_2
-#          shell: /bin/bash
+  test_command_2:
+    description: Test command 2 description
+    steps:
+      - run:
+          name: "Test command 2 name"
+          command: |
+            echo "test var no source: $TEST_VAR"
+            echo 'export TEST_VAR_1="test_235"' >> $BASH_ENV
+            source $BASH_ENV
+            echo "test var 1: $TEST_VAR_1"
+            echo "test var with source: $TEST_VAR"
+          shell: /bin/bash
 
   test_command_3:
     description: Test command 3 description
     steps:
       - run:
-          name: "Test command 3 name"
+          name: "Test command 3 run 1 name"
           command: |
-            date-dfdg
-            export status_3=$?
-            echo "export status: $status_3"
+            echo 'export TEST_VAR_2="test_236"' >> $BASH_ENV
+            echo "test var: $TEST_VAR"
+            echo "test var 1: $TEST_VAR_1"
+            echo "test var 2: $TEST_VAR_2"
           shell: /bin/bash
-      - check_exit_code_1:
-          exit_code: $status_3
-
-  test_command_3_1:
-    description: Test command 3 description
-    steps:
       - run:
-          name: "Run"
+          name: "Test command 3 run 2 name"
           command: |
-            TEST_EXIT_CODE=4
-            var1=true
-            if [ "$var1" = true ] && [ "$TEST_EXIT_CODE" -ne 0 ] && [ "$TEST_EXIT_CODE" -ne 4 ]; then
-            echo "Yes"
-            else
-            echo "No"
-            exit 1
-            fi
-            TEST_EXIT_CODE=1
-            var1=true
-            if [ "$var1" = true ] && [ "$TEST_EXIT_CODE" -ne 0 ] && [ "$TEST_EXIT_CODE" -ne 4 ]; then
-            echo "Yes"
-            else
-            echo "No"
-            fi
-            TEST_EXIT_CODE=4
-            var1=true
-            if [[ "$var1" = true && "$TEST_EXIT_CODE" -ne 0 && "$TEST_EXIT_CODE" -ne 4 ]]; then
-            echo "Yes"
-            else
-            echo "No"
-            fi
-            TEST_EXIT_CODE=1
-            var1=true
-            if [[ "$var1" = true && "$TEST_EXIT_CODE" -ne 0 && "$TEST_EXIT_CODE" -ne 4 ]]; then
-            echo "Yes"
-            else
-            echo "No"
-            fi
-      - run:
-          name: "After step"
-          command: |
-            echo "Test after failed"
-          when: always
+            source $BASH_ENV
+            echo "test var with source: $TEST_VAR_2"
           shell: /bin/bash
-#      - run:
-#          name: "Test command 3 name"
-#          command: |
-#            date-et
-#            echo "export status_3_1=$?" >> $BASH_ENV
-#            source $BASH_ENV
-#            echo "export status: $status_3_1"
-#          shell: /bin/bash
-#      - check_exit_code_1:
-#          exit_code: $status_3_1
-#      - run:
-#          name: "Check status after"
-#          command: |
-#            echo "Status 3_1: $status_3_1"
-#            echo "Status 4_1: $status_4_1"
-#            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
-#            if [ $UNEXPECTED_FAILURES = true ]; then
-#              echo "Fail"
-#              exit 1
-#            else
-#              echo "Pass"
-#            fi
-#          shell: /bin/bash
-#          when: always
 
   test_command_4:
     description: Test command 4 description
     steps:
       - run:
-          name: "Test command 4 name"
+          name: "Test command 4 run 1 name"
           command: |
-            set +e
-            cd /ergerio
-            export status_4=$?
-            echo "export status: $status_4"
-      - check_exit_code_2
-
-  test_command_4_1:
-    description: Test command 4 description
-    steps:
-      - run:
-          name: "Test command 4 name"
-          command: |
-            set +e
-            date-et
-            echo "export status_4_1=$?" >> $BASH_ENV
-            source $BASH_ENV
-            echo "export status: $status_4_1"
-      - check_exit_code_3
-      - run:
-          name: "Check status after"
-          command: |
-            echo "Status 3_1: $status_3_1"
-            echo "Status 4_1: $status_4_1"
-            echo "UNEXPECTED_FAILURES: $UNEXPECTED_FAILURES"
-            if [ $UNEXPECTED_FAILURES = true ]; then
-              echo "Fail"
-              exit 1
-            else
-              echo "Pass"
-            fi
+            echo 'export TEST_VAR_3="test_237"' >> $BASH_ENV
+            echo "test var: $TEST_VAR_3"
           shell: /bin/bash
-          when: always
+      - run:
+          name: "Test command 4 run 2 name"
+          command: |
+            echo "test var no source: $TEST_VAR_3"
+          shell: /bin/bash
+
 jobs:
   test_1:
     machine:
       image: ubuntu-1604:201903-01
     steps:
       - run:
-          name: "Test job 1"
+          name: "Test job 1 name"
           command: |
-            echo "Call test_command"
+            echo "Test job 1"
           shell: /bin/bash
       - test_command_1
 
@@ -261,46 +78,42 @@ jobs:
     machine:
       image: ubuntu-1604:201903-01
     steps:
+      - run:
+          name: "Test job 2 name"
+          command: |
+            echo "Test job 2"
+          shell: /bin/bash
       - test_command_2
-
-  test_2_1:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - test_command_2_1
 
   test_3:
     machine:
       image: ubuntu-1604:201903-01
     steps:
+      - run:
+          name: "Test job 3 name"
+          command: |
+            echo "Test job 3"
+          shell: /bin/bash
       - test_command_3
-
-  test_3_1:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - test_command_3_1
 
   test_4:
     machine:
       image: ubuntu-1604:201903-01
     steps:
+      - run:
+          name: "Test job 4 name"
+          command: |
+            echo "Test job 4"
+          shell: /bin/bash
       - test_command_4
-
-  test_4_1:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - test_command_4_1
 
 workflows:
   version: 2
   test_workflow:
     jobs:
-#      - test_1
-#      - test_2
-#      - test_2_1
-#      - test_3
-      - test_3_1
-#      - test_4
-#      - test_4_1
+      - test_1
+      - test_2:
+          requires:
+            - test_1
+      - test_3
+      - test_4
