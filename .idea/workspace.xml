@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="268">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -34,14 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>export</find>
-      <find>check_exit_code_1</find>
-      <find>tatus_4_1</find>
-      <find>Status 4_1</find>
-      <find>TEST_VAR_1</find>
-      <find>$TEST_VAR_1</find>
-      <find>$TEST_VAR_3</find>
-      <find>$TEST_VAR</find>
       <find>Test job 1 name</find>
       <find>Test job 1</find>
       <find>Test command 1 run 1 name</find>
@@ -54,16 +46,24 @@
       <find>TEST_VAR</find>
       <find>TEST_VAR_2</find>
       <find>executors:</find>
-      <find>test_command_2</find>
       <find>test_command_4</find>
-      <find>dir_2</find>
       <find>dir_5</find>
-      <find>test_command_3</find>
       <find>dir_6</find>
       <find>dir_7</find>
-      <find>test_command_2_1</find>
-      <find>test_command_5</find>
       <find>working_directory</find>
+      <find>test_3</find>
+      <find>test_5</find>
+      <find>main_di</find>
+      <find>executor: macos-ios-executor-xcode11</find>
+      <find>test_command_1</find>
+      <find>test_2</find>
+      <find>test_command_2</find>
+      <find>test_2_1</find>
+      <find>test_command_2_1</find>
+      <find>test_command_3</find>
+      <find>test_command_5</find>
+      <find>test_command_5_1</find>
+      <find>dir_2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,21 +182,7 @@
       <workItem from="1605513183552" duration="597000" />
       <workItem from="1605690755871" duration="492000" />
       <workItem from="1605859809916" duration="3221000" />
-      <workItem from="1610727948221" duration="3553000" />
-    </task>
-    <task id="LOCAL-00036" summary="Parameters test 10">
-      <created>1573320105079</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1573320105079</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Parameters test 11">
-      <created>1573320308151</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1573320308152</updated>
+      <workItem from="1610727948221" duration="4288000" />
     </task>
     <task id="LOCAL-00038" summary="Parameters test 12">
       <created>1573320470049</created>
@@ -527,11 +513,25 @@
       <option name="project" value="LOCAL" />
       <updated>1610732159814</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Test workspace">
+      <created>1610732201778</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1610732201778</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Test workspace">
+      <created>1610732487017</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1610732487018</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63670000" />
+    <option name="totallyTimeSpent" value="64405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -605,8 +605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="268">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>

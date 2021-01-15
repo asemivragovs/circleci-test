@@ -32,27 +32,6 @@ commands:
             echo "path: $PWD"
           shell: /bin/bash
 
-  test_command_2_1:
-    description: Test command 2_1 description
-    steps:
-      - run:
-          name: "Test command 2_1 run 1 name"
-          command: |
-            echo "path: $PWD"
-            mkdir dir_2
-            cd dir_2
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_2_2:
-    description: Test command 2_2 description
-    steps:
-      - run:
-          name: "Test command 2_2 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-
   test_command_3:
     description: Test command 3 description
     steps:
@@ -219,26 +198,6 @@ jobs:
           shell: /bin/bash
       - test_command_2
 
-  test_2_1:
-    executor: macos-ios-executor-xcode11
-    steps:
-      - run:
-          name: "Test job 2_1 name"
-          command: |
-            echo "Test job 2_1"
-          shell: /bin/bash
-      - test_command_2_1
-
-  test_2_2:
-    executor: macos-ios-executor-xcode11
-    steps:
-      - run:
-          name: "Test job 2_2 name"
-          command: |
-            echo "Test job 2_2"
-          shell: /bin/bash
-      - test_command_2_2
-
   test_3:
     machine:
       image: ubuntu-1604:201903-01
@@ -296,8 +255,7 @@ jobs:
       - test_command_10
 
   test_8_1:
-    machine:
-      image: ubuntu-1604:201903-01
+    executor: macos-ios-executor-xcode11
     steps:
       - run:
           name: "Test job 8_1 name"
@@ -316,10 +274,6 @@ workflows:
       - test_2:
           requires:
             - test_1
-      - test_2_1
-      - test_2_2:
-          requires:
-            - test_2_1
       - test_3
       - test_4:
           requires:
