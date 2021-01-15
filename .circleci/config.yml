@@ -6,8 +6,8 @@ aliases:
 
 executors:
   macos-ios-executor-xcode11:
-    macos:
-        xcode: "11.0.0"
+    machine:
+        image: ubuntu-1604:201903-01
     working_directory: *workspace
 
 commands:
