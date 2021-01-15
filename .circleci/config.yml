@@ -1,5 +1,15 @@
 version: 2.1
 
+aliases:
+  - &workspace
+      ~/main_dir
+
+executors:
+  macos-ios-executor-xcode11:
+    macos:
+        xcode: "11.0.0"
+    working_directory: *workspace
+
 commands:
   test_command_1:
     description: Test command 1 description
@@ -7,10 +17,11 @@ commands:
       - run:
           name: "Test command 1 run 1 name"
           command: |
-            echo 'export TEST_VAR="test_234"' >> $BASH_ENV
-            echo "test var: $TEST_VAR"
+            echo "path: $PWD"
+            mkdir dir_1
+            cd dir_1
+            echo "path: $PWD"
           shell: /bin/bash
-      - test_command_2
 
   test_command_2:
     description: Test command 2 description
@@ -18,9 +29,28 @@ commands:
       - run:
           name: "Test command 2 name"
           command: |
-            echo "test var no source: $TEST_VAR"
-            source $BASH_ENV
-            echo "test var with source: $TEST_VAR"
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_2_1:
+    description: Test command 2_1 description
+    steps:
+      - run:
+          name: "Test command 2_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+            mkdir dir_2
+            cd dir_2
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_2_2:
+    description: Test command 2_2 description
+    steps:
+      - run:
+          name: "Test command 2_2 run 1 name"
+          command: |
+            echo "path: $PWD"
           shell: /bin/bash
 
   test_command_3:
@@ -29,9 +59,11 @@ commands:
       - run:
           name: "Test command 3 run 1 name"
           command: |
-            echo 'export TEST_VAR_2="test_236"' >> $BASH_ENV
+            echo "path: $PWD"
+            mkdir dir_3
+            cd dir_3
+            echo "path: $PWD"
           shell: /bin/bash
-      - test_command_4
 
   test_command_4:
     description: Test command 4 description
@@ -39,18 +71,136 @@ commands:
       - run:
           name: "Test command 4 run 1 name"
           command: |
-            echo "test var: $TEST_VAR_2"
+            echo "path: $PWD"
           shell: /bin/bash
+
+  test_command_5:
+    description: Test command 5 description
+    steps:
       - run:
-          name: "Test command 4 run 2 name"
+          name: "Test command 5 run 1 name"
           command: |
-            echo "test var: $TEST_VAR_2"
+            echo "path: $PWD"
+            mkdir dir_4
+            cd dir_4
+            echo "path: $PWD"
+          shell: /bin/bash
+      - test_command_6
+
+  test_command_6:
+    description: Test command 6 description
+    steps:
+      - run:
+          name: "Test command 6 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+      - test_command_7
+
+  test_command_7:
+    description: Test command 7 description
+    steps:
+      - run:
+          name: "Test command 7 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_5_1:
+    description: Test command 5_1 description
+    steps:
+      - run:
+          name: "Test command 5_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+            mkdir dir_6
+            cd dir_6
+            echo "path: $PWD"
+          shell: /bin/bash
+      - test_command_6_1
+
+  test_command_6_1:
+    description: Test command 6_1 description
+    steps:
+      - run:
+          name: "Test command 6_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+      - test_command_7_1
+
+  test_command_7_1:
+    description: Test command 7_1 description
+    steps:
+      - run:
+          name: "Test command 7_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_8:
+    description: Test command 8 description
+    steps:
+      - run:
+          name: "Test command 8 run 1 name"
+          command: |
+            echo "path: $PWD"
+            mkdir dir_5
+            cd dir_5
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_9:
+    description: Test command 9 description
+    steps:
+      - run:
+          name: "Test command 9 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_10:
+    description: Test command 10 description
+    steps:
+      - run:
+          name: "Test command 10 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_8_1:
+    description: Test command 8_1 description
+    steps:
+      - run:
+          name: "Test command 8_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+            mkdir dir_7
+            cd dir_7
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_9_1:
+    description: Test command 9_1 description
+    steps:
+      - run:
+          name: "Test command 9_1 run 1 name"
+          command: |
+            echo "path: $PWD"
+          shell: /bin/bash
+
+  test_command_10_1:
+    description: Test command 10_1 description
+    steps:
+      - run:
+          name: "Test command 10_1 run 1 name"
+          command: |
+            echo "path: $PWD"
           shell: /bin/bash
 
 jobs:
   test_1:
-    machine:
-      image: ubuntu-1604:201903-01
+    executor: macos-ios-executor-xcode11
     steps:
       - run:
           name: "Test job 1 name"
@@ -60,8 +210,7 @@ jobs:
       - test_command_1
 
   test_2:
-    machine:
-      image: ubuntu-1604:201903-01
+    executor: macos-ios-executor-xcode11
     steps:
       - run:
           name: "Test job 2 name"
@@ -69,6 +218,26 @@ jobs:
             echo "Test job 2"
           shell: /bin/bash
       - test_command_2
+
+  test_2_1:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 2_1 name"
+          command: |
+            echo "Test job 2_1"
+          shell: /bin/bash
+      - test_command_2_1
+
+  test_2_2:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 2_2 name"
+          command: |
+            echo "Test job 2_2"
+          shell: /bin/bash
+      - test_command_2_2
 
   test_3:
     machine:
@@ -92,9 +261,64 @@ jobs:
           shell: /bin/bash
       - test_command_4
 
+  test_5:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - run:
+          name: "Test job 5 name"
+          command: |
+            echo "Test job 5"
+          shell: /bin/bash
+      - test_command_5
+
+  test_5_1:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 5_1 name"
+          command: |
+            echo "Test job 5_1"
+          shell: /bin/bash
+      - test_command_5_1
+
+  test_8:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - run:
+          name: "Test job 8 name"
+          command: |
+            echo "Test job 8"
+          shell: /bin/bash
+      - test_command_8
+      - test_command_9
+      - test_command_10
+
+  test_8_1:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - run:
+          name: "Test job 8_1 name"
+          command: |
+            echo "Test job 8_1"
+          shell: /bin/bash
+      - test_command_8_1
+      - test_command_9_1
+      - test_command_10_1
+
 workflows:
   version: 2
   test_workflow:
     jobs:
       - test_1
+      - test_2
+      - test_2_1
+      - test_2_2
       - test_3
+      - test_4
+      - test_5
+      - test_5_1
+      - test_8
+      - test_8_1
