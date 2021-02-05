@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="261">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -34,12 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Test job 1 name</find>
-      <find>Test job 1</find>
-      <find>Test command 1 run 1 name</find>
-      <find>test_234</find>
-      <find>Test command 2 name</find>
-      <find>test_236</find>
       <find>test_235</find>
       <find>test_237</find>
       <find>TEST_VAR_3</find>
@@ -52,18 +46,24 @@
       <find>dir_7</find>
       <find>working_directory</find>
       <find>test_3</find>
-      <find>test_5</find>
       <find>main_di</find>
       <find>executor: macos-ios-executor-xcode11</find>
+      <find>test_2_1</find>
+      <find>test_command_2_1</find>
+      <find>dir_2</find>
+      <find>test_1</find>
       <find>test_command_1</find>
       <find>test_2</find>
       <find>test_command_2</find>
-      <find>test_2_1</find>
-      <find>test_command_2_1</find>
       <find>test_command_3</find>
+      <find>test_5</find>
       <find>test_command_5</find>
       <find>test_command_5_1</find>
-      <find>dir_2</find>
+      <find>test_command_8</find>
+      <find>test_command_8_1</find>
+      <find>test_command_7</find>
+      <find>test_command_6</find>
+      <find>set +e</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,7 +104,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,13 +183,6 @@
       <workItem from="1605690755871" duration="492000" />
       <workItem from="1605859809916" duration="3221000" />
       <workItem from="1610727948221" duration="4288000" />
-    </task>
-    <task id="LOCAL-00038" summary="Parameters test 12">
-      <created>1573320470049</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1573320470049</updated>
     </task>
     <task id="LOCAL-00039" summary="Parameters test 13">
       <created>1573555162810</created>
@@ -527,19 +520,27 @@
       <option name="project" value="LOCAL" />
       <updated>1610732487018</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Test command exit 1">
+      <created>1612522594778</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1612522594781</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64405000" />
+    <option name="totallyTimeSpent" value="66843000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="25" width="1440" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14940098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14799154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -549,7 +550,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.51974523" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.5186615" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -562,7 +563,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Use env variable in cache key - 12" />
     <MESSAGE value="Use env variable in cache key - 12-fix" />
     <MESSAGE value="Line break long cache key" />
     <MESSAGE value="Line break long cache key - 1" />
@@ -587,7 +587,8 @@
     <MESSAGE value="Test env vars" />
     <MESSAGE value="Test env vars 1" />
     <MESSAGE value="Test workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test workspace" />
+    <MESSAGE value="Test command exit 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test command exit 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -605,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="261">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>

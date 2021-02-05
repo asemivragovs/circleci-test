@@ -18,9 +18,91 @@ commands:
           name: "Test command 1 run 1 name"
           command: |
             echo "one"
-            date
+            dateq
             echo "two"
           shell: /bin/bash
+      - run:
+          name: "Test command 1 run 2"
+          command: |
+            echo "one"
+            dateq
+            echo "two"
+      - run:
+          name: "Test command 1 run 3"
+          command: |
+            set +e
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+          shell: /bin/bash
+      - run:
+          name: "Test command 1 run 4"
+          command: |
+            set +e
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+      - run:
+          name: "Test command 1 run 5"
+          command: |
+            set -e
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+          shell: /bin/bash
+      - run:
+          name: "Test command 1 run 6"
+          command: |
+            set -e
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+      - run:
+          name: "Test command 1 run 7"
+          command: |
+            set -eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+          shell: /bin/bash
+      - run:
+          name: "Test command 1 run 8"
+          command: |
+            set -eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+      - run:
+          name: "Test command 1 run 9"
+          command: |
+            set +eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+          shell: /bin/bash
+      - run:
+          name: "Test command 1 run 10"
+          command: |
+            set +eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
 
   test_command_2:
     description: Test command 2 description
@@ -168,7 +250,7 @@ jobs:
       - run:
           name: "Test job 6 name"
           command: |
-            echo "Test job 6
+            echo "Test job 6"
           shell: /bin/bash
       - test_command_6
 
