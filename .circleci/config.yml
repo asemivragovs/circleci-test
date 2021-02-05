@@ -20,175 +20,129 @@ commands:
             echo "one"
             dateq
             echo "two"
-          shell: /bin/bash
-      - run:
-          name: "Test command 1 run 2"
-          command: |
-            echo "one"
-            dateq
-            echo "two"
-      - run:
-          name: "Test command 1 run 3"
-          command: |
-            set +e
-            echo "one"
-            dateq
-            echo "two"
             dateq
             echo "three"
           shell: /bin/bash
-      - run:
-          name: "Test command 1 run 4"
-          command: |
-            set +e
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-      - run:
-          name: "Test command 1 run 5"
-          command: |
-            set -e
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-          shell: /bin/bash
-      - run:
-          name: "Test command 1 run 6"
-          command: |
-            set -e
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-      - run:
-          name: "Test command 1 run 7"
-          command: |
-            set -eo pipefail
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-          shell: /bin/bash
-      - run:
-          name: "Test command 1 run 8"
-          command: |
-            set -eo pipefail
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-      - run:
-          name: "Test command 1 run 9"
-          command: |
-            set +eo pipefail
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-          shell: /bin/bash
-      - run:
-          name: "Test command 1 run 10"
-          command: |
-            set +eo pipefail
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
 
   test_command_2:
     description: Test command 2 description
     steps:
       - run:
-          name: "Test command 2 name"
+          name: "Test command 2"
           command: |
             echo "one"
-            dateas
+            dateq
             echo "two"
-          shell: /bin/bash
+            dateq
+            echo "three"
 
   test_command_3:
     description: Test command 3 description
     steps:
       - run:
-          name: "Test command 3 run 1 name"
+          name: "Test command 3"
           command: |
-            set -e
+            set +e
             echo "one"
-            dateas
+            dateq
             echo "two"
+            dateq
+            echo "three"
           shell: /bin/bash
 
   test_command_4:
     description: Test command 4 description
     steps:
       - run:
-          name: "Test command 4 run 1 name"
+          name: "Test command 4"
           command: |
-            set -e
+            set +e
             echo "one"
-            dateas
+            dateq
             echo "two"
-            datfh
-          shell: /bin/bash
+            dateq
+            echo "three"
 
   test_command_5:
     description: Test command 5 description
     steps:
       - run:
-          name: "Test command 5 run 1 name"
+          name: "Test command 5"
           command: |
-            set +e
+            set -e
             echo "one"
-            dateas
+            dateq
             echo "two"
+            dateq
+            echo "three"
           shell: /bin/bash
 
   test_command_6:
     description: Test command 6 description
     steps:
       - run:
-          name: "Test command 6 run 1 name"
+          name: "Test command 6"
           command: |
-            set +e
+            set -e
             echo "one"
-            dateas
+            dateq
             echo "two"
-            datrhj
-          shell: /bin/bash
+            dateq
+            echo "three"
 
   test_command_7:
     description: Test command 7 description
     steps:
       - run:
-          name: "Test command 7 run 1 name"
+          name: "Test command 7"
           command: |
             set -eo pipefail
             echo "one"
-            dateas
+            dateq
             echo "two"
+            dateq
+            echo "three"
           shell: /bin/bash
 
   test_command_8:
-    description: Test command 5_1 description
+    description: Test command 8 description
     steps:
       - run:
-          name: "Test command 5_1 run 1 name"
+          name: "Test command 8"
           command: |
             set -eo pipefail
             echo "one"
-            dateas
+            dateq
             echo "two"
-            datrhj
+            dateq
+            echo "three"
+
+  test_command_9:
+    description: Test command 9 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
           shell: /bin/bash
+
+  test_command_10:
+    description: Test command 10 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +eo pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
 
 jobs:
   test_1:
@@ -271,9 +225,29 @@ jobs:
       - run:
           name: "Test job 8"
           command: |
-            echo "Test job 8_1"
+            echo "Test job 8"
           shell: /bin/bash
       - test_command_8
+
+  test_9:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 9"
+          command: |
+            echo "Test job 9"
+          shell: /bin/bash
+      - test_command_9
+
+  test_10:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 10"
+          command: |
+            echo "Test job 10"
+          shell: /bin/bash
+      - test_command_10
 
 workflows:
   version: 2
@@ -287,3 +261,5 @@ workflows:
       - test_6
       - test_7
       - test_8
+      - test_9
+      - test_10
