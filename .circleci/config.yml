@@ -7,7 +7,7 @@ aliases:
 executors:
   macos-ios-executor-xcode11:
     machine:
-        image: ubuntu-1604:201903-01
+      image: ubuntu-1604:201903-01
     working_directory: *workspace
 
 commands:
@@ -17,10 +17,9 @@ commands:
       - run:
           name: "Test command 1 run 1 name"
           command: |
-            echo "path: $PWD"
-            mkdir dir_1
-            cd dir_1
-            echo "path: $PWD"
+            echo "one"
+            date
+            echo "two"
           shell: /bin/bash
 
   test_command_2:
@@ -29,7 +28,9 @@ commands:
       - run:
           name: "Test command 2 name"
           command: |
-            echo "path: $PWD"
+            echo "one"
+            dateas
+            echo "two"
           shell: /bin/bash
 
   test_command_3:
@@ -38,10 +39,10 @@ commands:
       - run:
           name: "Test command 3 run 1 name"
           command: |
-            echo "path: $PWD"
-            mkdir dir_3
-            cd dir_3
-            echo "path: $PWD"
+            set -e
+            echo "one"
+            dateas
+            echo "two"
           shell: /bin/bash
 
   test_command_4:
@@ -50,7 +51,11 @@ commands:
       - run:
           name: "Test command 4 run 1 name"
           command: |
-            echo "path: $PWD"
+            set -e
+            echo "one"
+            dateas
+            echo "two"
+            datfh
           shell: /bin/bash
 
   test_command_5:
@@ -59,12 +64,11 @@ commands:
       - run:
           name: "Test command 5 run 1 name"
           command: |
-            echo "path: $PWD"
-            mkdir dir_4
-            cd dir_4
-            echo "path: $PWD"
+            set +e
+            echo "one"
+            dateas
+            echo "two"
           shell: /bin/bash
-      - test_command_6
 
   test_command_6:
     description: Test command 6 description
@@ -72,9 +76,12 @@ commands:
       - run:
           name: "Test command 6 run 1 name"
           command: |
-            echo "path: $PWD"
+            set +e
+            echo "one"
+            dateas
+            echo "two"
+            datrhj
           shell: /bin/bash
-      - test_command_7
 
   test_command_7:
     description: Test command 7 description
@@ -82,99 +89,23 @@ commands:
       - run:
           name: "Test command 7 run 1 name"
           command: |
-            echo "path: $PWD"
+            set -eo pipefail
+            echo "one"
+            dateas
+            echo "two"
           shell: /bin/bash
 
-  test_command_5_1:
+  test_command_8:
     description: Test command 5_1 description
     steps:
       - run:
           name: "Test command 5_1 run 1 name"
           command: |
-            echo "path: $PWD"
-            mkdir dir_6
-            cd dir_6
-            echo "path: $PWD"
-          shell: /bin/bash
-      - test_command_6_1
-
-  test_command_6_1:
-    description: Test command 6_1 description
-    steps:
-      - run:
-          name: "Test command 6_1 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-      - test_command_7_1
-
-  test_command_7_1:
-    description: Test command 7_1 description
-    steps:
-      - run:
-          name: "Test command 7_1 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_8:
-    description: Test command 8 description
-    steps:
-      - run:
-          name: "Test command 8 run 1 name"
-          command: |
-            echo "path: $PWD"
-            mkdir dir_5
-            cd dir_5
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_9:
-    description: Test command 9 description
-    steps:
-      - run:
-          name: "Test command 9 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_10:
-    description: Test command 10 description
-    steps:
-      - run:
-          name: "Test command 10 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_8_1:
-    description: Test command 8_1 description
-    steps:
-      - run:
-          name: "Test command 8_1 run 1 name"
-          command: |
-            echo "path: $PWD"
-            mkdir dir_7
-            cd dir_7
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_9_1:
-    description: Test command 9_1 description
-    steps:
-      - run:
-          name: "Test command 9_1 run 1 name"
-          command: |
-            echo "path: $PWD"
-          shell: /bin/bash
-
-  test_command_10_1:
-    description: Test command 10_1 description
-    steps:
-      - run:
-          name: "Test command 10_1 run 1 name"
-          command: |
-            echo "path: $PWD"
+            set -eo pipefail
+            echo "one"
+            dateas
+            echo "two"
+            datrhj
           shell: /bin/bash
 
 jobs:
@@ -231,54 +162,46 @@ jobs:
           shell: /bin/bash
       - test_command_5
 
-  test_5_1:
+  test_6:
     executor: macos-ios-executor-xcode11
     steps:
       - run:
-          name: "Test job 5_1 name"
+          name: "Test job 6 name"
           command: |
-            echo "Test job 5_1"
+            echo "Test job 6
           shell: /bin/bash
-      - test_command_5_1
+      - test_command_6
 
-  test_8:
+  test_7:
     machine:
       image: ubuntu-1604:201903-01
     steps:
       - run:
-          name: "Test job 8 name"
+          name: "Test job 7 name"
           command: |
-            echo "Test job 8"
+            echo "Test job 7"
           shell: /bin/bash
-      - test_command_8
-      - test_command_9
-      - test_command_10
+      - test_command_7
 
-  test_8_1:
+  test_8:
     executor: macos-ios-executor-xcode11
     steps:
       - run:
-          name: "Test job 8_1 name"
+          name: "Test job 8"
           command: |
             echo "Test job 8_1"
           shell: /bin/bash
-      - test_command_8_1
-      - test_command_9_1
-      - test_command_10_1
+      - test_command_8
 
 workflows:
   version: 2
   test_workflow:
     jobs:
       - test_1
-      - test_2:
-          requires:
-            - test_1
+      - test_2
       - test_3
-      - test_4:
-          requires:
-            - test_3
+      - test_4
       - test_5
-      - test_5_1
+      - test_6
+      - test_7
       - test_8
-      - test_8_1
