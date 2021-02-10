@@ -8,6 +8,13 @@ executors:
   macos-ios-executor-xcode11:
     machine:
       image: ubuntu-1604:201903-01
+    parameters:
+      executor_env_var:
+        type: string
+        default: "Default executor var 1"
+    environment:
+      EXC_ENV_VAR_1: << parameters.executor_env_var >>
+      EXC_ENV_VAR_2: "Default executor var 2 "
     working_directory: *workspace
 
 commands:
@@ -23,6 +30,11 @@ commands:
             dateq
             echo "three"
             dateq
+            echo "executor var 1: $executor_env_var"
+            echo "executor var 2: $EXC_ENV_VAR_1"
+            echo "executor var 2: $EXC_ENV_VAR_2"
+            export TEST_VAR_1="test_1"
+            echo "export TEST_VAR_2=test_2" >> $BASH_ENV
           shell: /bin/bash
       - next_test_step
 

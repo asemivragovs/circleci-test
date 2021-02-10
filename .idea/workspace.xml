@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="Test command exit">
+      <change afterPath="$PROJECT_DIR$/test_script.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -24,8 +25,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="388" selection-start-line="388" selection-start-column="1" selection-end-line="399" selection-end-column="16" />
+            <state relative-caret-position="198">
+              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_script.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -73,6 +83,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/test_script.sh" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
       </list>
     </option>
@@ -184,14 +195,7 @@
       <workItem from="1605859809916" duration="3221000" />
       <workItem from="1610727948221" duration="4288000" />
       <workItem from="1612956833919" duration="10000" />
-      <workItem from="1612957074199" duration="2125000" />
-    </task>
-    <task id="LOCAL-00045" summary="Parameters test 19">
-      <created>1573572202957</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1573572202957</updated>
+      <workItem from="1612957074199" duration="4602000" />
     </task>
     <task id="LOCAL-00046" summary="get current user - 1">
       <created>1573572518349</created>
@@ -529,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1612958392610</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Test command exit">
+      <created>1612961672631</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1612961672633</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71228000" />
+    <option name="totallyTimeSpent" value="73705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="875" extended-state="6" />
@@ -551,7 +562,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.5186615" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.5263835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -606,10 +617,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_script.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="388" selection-start-line="388" selection-start-column="1" selection-end-line="399" selection-end-column="16" />
+        <state relative-caret-position="198">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
