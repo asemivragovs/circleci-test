@@ -339,6 +339,46 @@ jobs:
           shell: /bin/bash
       - test_command_10
 
+  test_11:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 11"
+          command: |
+            echo "Test job 11"
+          shell: /bin/bash
+      - test_command_11
+
+  test_12:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 12"
+          command: |
+            echo "Test job 12"
+          shell: /bin/bash
+      - test_command_12
+
+  test_13:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 13"
+          command: |
+            echo "Test job 13"
+          shell: /bin/bash
+      - test_command_13
+
+  test_14:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 14"
+          command: |
+            echo "Test job 14"
+          shell: /bin/bash
+      - test_command_14
+
 workflows:
   version: 2
   test_workflow:
