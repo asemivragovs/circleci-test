@@ -24,8 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="431">
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/test_script.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -34,29 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_235</find>
-      <find>test_237</find>
-      <find>TEST_VAR_3</find>
-      <find>TEST_VAR</find>
-      <find>TEST_VAR_2</find>
-      <find>executors:</find>
-      <find>test_command_4</find>
-      <find>dir_5</find>
-      <find>dir_6</find>
-      <find>dir_7</find>
-      <find>working_directory</find>
-      <find>test_3</find>
-      <find>main_di</find>
-      <find>executor: macos-ios-executor-xcode11</find>
-      <find>test_2_1</find>
-      <find>test_command_2_1</find>
-      <find>dir_2</find>
-      <find>test_1</find>
-      <find>test_command_1</find>
-      <find>test_2</find>
-      <find>test_command_2</find>
-      <find>test_command_3</find>
-      <find>test_5</find>
       <find>test_command_5</find>
       <find>test_command_5_1</find>
       <find>test_command_8</find>
@@ -64,6 +50,29 @@
       <find>test_command_7</find>
       <find>test_command_6</find>
       <find>set +e</find>
+      <find>-eo p</find>
+      <find>+eo</find>
+      <find>description</find>
+      <find>test_11</find>
+      <find>next_test_step</find>
+      <find>Default executor var 1</find>
+      <find>Default executor var 2</find>
+      <find>test_1</find>
+      <find>$STEP_ENV_VAR_1</find>
+      <find>$</find>
+      <find>$JOB_ENV_VAR_1</find>
+      <find>EXC_ENV_VAR_1</find>
+      <find>ecutor_env_var_2</find>
+      <find>JOB_ENV_VAR_3</find>
+      <find>STEP_ENV_VAR_1</find>
+      <find>STEP_ENV_VAR_2</find>
+      <find>2</find>
+      <find>executor_env_var_1</find>
+      <find>xecutor_env_var_2</find>
+      <find>JOB_ENV_VAR_1</find>
+      <find>executor_env_var_2</find>
+      <find>EXC_ENV_VAR_4</find>
+      <find>Executor env vars 2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,14 +82,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/test_script.sh" />
+        <option value="$PROJECT_DIR$/scripts/test_script.sh" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -94,11 +105,6 @@
             <path>
               <item name="circleci-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="circleci-test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="circleci-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="circleci-test" type="462c0819:PsiDirectoryNode" />
-              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -114,6 +120,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -183,146 +192,8 @@
       <workItem from="1605690755871" duration="492000" />
       <workItem from="1605859809916" duration="3221000" />
       <workItem from="1610727948221" duration="4288000" />
-    </task>
-    <task id="LOCAL-00039" summary="Parameters test 13">
-      <created>1573555162810</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555162810</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Parameters test 14">
-      <created>1573555209441</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555209441</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Parameters test 15">
-      <created>1573555307354</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555307354</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Parameters test 16">
-      <created>1573555484620</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555484620</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Parameters test 17">
-      <created>1573555497569</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555497569</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Parameters test 18">
-      <created>1573555512315</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1573555512315</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Parameters test 19">
-      <created>1573572202957</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1573572202957</updated>
-    </task>
-    <task id="LOCAL-00046" summary="get current user - 1">
-      <created>1573572518349</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1573572518349</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Use env variable in cache key">
-      <created>1573681713839</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1573681713839</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Use env variable in cache key - 1">
-      <created>1573681954216</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1573681954216</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Use env variable in cache key - 2">
-      <created>1573682726985</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1573682726985</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Use env variable in cache key - 3">
-      <created>1573682875780</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1573682875781</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Use env variable in cache key - 4">
-      <created>1573683066966</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683066966</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Use env variable in cache key - 5">
-      <created>1573683149511</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683149511</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Use env variable in cache key - 6">
-      <created>1573683219011</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683219011</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Use env variable in cache key - 7">
-      <created>1573683392403</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683392403</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Use env variable in cache key - 8">
-      <created>1573683508810</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683508810</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Use env variable in cache key - 9">
-      <created>1573683955600</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683955600</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Use env variable in cache key - 10">
-      <created>1573684124001</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1573684124002</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Use env variable in cache key - 11">
-      <created>1573684400296</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1573684400296</updated>
+      <workItem from="1612956833919" duration="10000" />
+      <workItem from="1612957074199" duration="10528000" />
     </task>
     <task id="LOCAL-00059" summary="Use env variable in cache key - 12">
       <created>1573684684285</created>
@@ -527,11 +398,151 @@
       <option name="project" value="LOCAL" />
       <updated>1612522594781</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Test command exit 2">
+      <created>1612525527843</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1612525527845</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Test command exit 3">
+      <created>1612526374172</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1612526374173</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Test command exit">
+      <created>1612957116981</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957116981</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Test command exit">
+      <created>1612957843173</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957843174</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Test command exit">
+      <created>1612958305729</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1612958305729</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Test command exit">
+      <created>1612958392609</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1612958392610</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Test command exit">
+      <created>1612961672631</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1612961672633</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Test command exit">
+      <created>1612978910028</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1612978910037</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Test command exit">
+      <created>1612978987830</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1612978987832</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Test command exit">
+      <created>1612979467803</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1612979467803</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Test command exit">
+      <created>1612979820192</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1612979820192</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Test command exit">
+      <created>1612980109948</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1612980109948</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Test command exit">
+      <created>1612980221281</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1612980221281</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Test command exit">
+      <created>1613032399832</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1613032399836</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Test command exit">
+      <created>1613032786202</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1613032786205</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Test command exit">
+      <created>1613033002144</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1613033002145</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Test command exit">
+      <created>1613033257643</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1613033257644</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Test command exit">
+      <created>1613034757628</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1613034757631</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Test command exit">
+      <created>1613034826698</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1613034826698</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Test command exit">
+      <created>1613034872112</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1613034872112</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66843000" />
+    <option name="totallyTimeSpent" value="79631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="875" extended-state="6" />
@@ -540,7 +551,6 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14799154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -549,10 +559,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.5186615" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5263835" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32947233" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -563,9 +574,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Use env variable in cache key - 12-fix" />
-    <MESSAGE value="Line break long cache key" />
-    <MESSAGE value="Line break long cache key - 1" />
     <MESSAGE value="Line break long cache key - 2" />
     <MESSAGE value="Line break long cache key - 2.1" />
     <MESSAGE value="Parameter test 1" />
@@ -588,7 +596,10 @@
     <MESSAGE value="Test env vars 1" />
     <MESSAGE value="Test workspace" />
     <MESSAGE value="Test command exit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test command exit 1" />
+    <MESSAGE value="Test command exit 2" />
+    <MESSAGE value="Test command exit 3" />
+    <MESSAGE value="Test command exit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test command exit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
@@ -604,10 +615,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/test_script.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="431">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>

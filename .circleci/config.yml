@@ -2,18 +2,30 @@ version: 2.1
 
 aliases:
   - &workspace
-      ~/main_dir
+      ~/circleci-test
 
 executors:
   macos-ios-executor-xcode11:
     machine:
       image: ubuntu-1604:201903-01
+    parameters:
+      executor_env_var_1:
+        type: string
+        default: "Executor env var 1"
+      executor_env_var_2:
+        type: string
+        default: "Executor env vars 2"
+    environment:
+      EXC_ENV_VAR_3: << parameters.executor_env_var_1 >>
+      EXC_ENV_VAR_4: << parameters.executor_env_var_2 >>
+      EXC_ENV_VAR_5: 10
     working_directory: *workspace
 
 commands:
   test_command_1:
     description: Test command 1 description
     steps:
+      - checkout
       - run:
           name: "Test command 1 run 1 name"
           command: |
@@ -45,6 +57,12 @@ commands:
             chmod +x ./scripts/test_script.sh
             ./scripts/test_script.sh
           shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_2:
     description: Test command 2 description
@@ -53,10 +71,18 @@ commands:
           name: "Test command 2"
           command: |
             echo "one"
+            echo "executor var 4: $EXC_ENV_VAR_4"
             dateq
             echo "two"
             dateq
             echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_3:
     description: Test command 3 description
@@ -70,7 +96,14 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_4:
     description: Test command 4 description
@@ -84,6 +117,13 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_5:
     description: Test command 5 description
@@ -97,7 +137,14 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_6:
     description: Test command 6 description
@@ -111,6 +158,13 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_7:
     description: Test command 7 description
@@ -124,7 +178,14 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_8:
     description: Test command 8 description
@@ -138,6 +199,13 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_9:
     description: Test command 9 description
@@ -151,7 +219,14 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_10:
     description: Test command 10 description
@@ -165,10 +240,117 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
+
+  test_command_11:
+    description: Test command 11 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set -o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+          shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
+
+  test_command_12:
+    description: Test command 12 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set -o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
+
+  test_command_13:
+    description: Test command 13 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+          shell: /bin/bash
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
+
+  test_command_14:
+    description: Test command 14 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+      - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
+
+  next_test_step:
+    description: The next test step
+    steps:
+      - run:
+          name: "The next test step"
+          command: |
+            echo "Next test step"
 
 jobs:
   test_1:
-    executor: macos-ios-executor-xcode11
+    executor:
+      name: macos-ios-executor-xcode11
+      executor_env_var_2: "Executor env var 2 from job"
+    environment:
+      JOB_ENV_VAR_1: "Job env var 1"
+      JOB_ENV_VAR_2: $EXC_ENV_VAR_5
+      JOB_ENV_VAR_3: "Job env var 3"
+      JOB_ENV_VAR_4: $EXC_ENV_VAR_3
+      JOB_ENV_VAR_5: $EXC_ENV_VAR_4
+      JOB_ENV_VAR_6: $executor_env_var_1
+      JOB_ENV_VAR_7: $executor_env_var_2
     steps:
       - run:
           name: "Test job 1 name"
@@ -271,17 +453,61 @@ jobs:
           shell: /bin/bash
       - test_command_10
 
+  test_11:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 11"
+          command: |
+            echo "Test job 11"
+          shell: /bin/bash
+      - test_command_11
+
+  test_12:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 12"
+          command: |
+            echo "Test job 12"
+          shell: /bin/bash
+      - test_command_12
+
+  test_13:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 13"
+          command: |
+            echo "Test job 13"
+          shell: /bin/bash
+      - test_command_13
+
+  test_14:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 14"
+          command: |
+            echo "Test job 14"
+          shell: /bin/bash
+      - test_command_14
+
 workflows:
   version: 2
   test_workflow:
     jobs:
       - test_1
       - test_2
-      - test_3
-      - test_4
-      - test_5
-      - test_6
-      - test_7
-      - test_8
-      - test_9
-      - test_10
+#      - test_3
+#      - test_4
+#      - test_5
+#      - test_6
+#      - test_7
+#      - test_8
+#      - test_9
+#      - test_10
+#      - test_11
+#      - test_12
+#      - test_13
+#      - test_14
