@@ -17,12 +17,12 @@ commands:
       - run:
           name: "Test command 1 run 1 name"
           command: |
-            set -o pipefail
             echo "one"
             dateq
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
 
   test_command_2:
@@ -31,12 +31,12 @@ commands:
       - run:
           name: "Test command 2"
           command: |
-            set -o pipefail
             echo "one"
             dateq
             echo "two"
             dateq
             echo "three"
+            dateq
 
   test_command_3:
     description: Test command 3 description
@@ -50,6 +50,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
 
   test_command_4:
@@ -64,6 +65,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
 
   test_command_5:
     description: Test command 5 description
@@ -77,6 +79,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
 
   test_command_6:
@@ -91,6 +94,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
 
   test_command_7:
     description: Test command 7 description
@@ -104,6 +108,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
 
   test_command_8:
@@ -118,6 +123,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
 
   test_command_9:
     description: Test command 9 description
@@ -131,6 +137,7 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
           shell: /bin/bash
 
   test_command_10:
@@ -145,6 +152,65 @@ commands:
             echo "two"
             dateq
             echo "three"
+            dateq
+
+  test_command_11:
+    description: Test command 11 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set -o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+          shell: /bin/bash
+
+  test_command_12:
+    description: Test command 12 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set -o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+
+  test_command_13:
+    description: Test command 13 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
+          shell: /bin/bash
+
+  test_command_14:
+    description: Test command 14 description
+    steps:
+      - run:
+          name: "Test command 1"
+          command: |
+            set +o pipefail
+            echo "one"
+            dateq
+            echo "two"
+            dateq
+            echo "three"
+            dateq
 
 jobs:
   test_1:
@@ -257,11 +323,11 @@ workflows:
     jobs:
       - test_1
       - test_2
-#      - test_3
-#      - test_4
-#      - test_5
-#      - test_6
-#      - test_7
-#      - test_8
-#      - test_9
-#      - test_10
+      - test_3
+      - test_4
+      - test_5
+      - test_6
+      - test_7
+      - test_8
+      - test_9
+      - test_10
