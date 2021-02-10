@@ -9,8 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="Test command exit">
-      <change afterPath="$PROJECT_DIR$/test_script.sh" afterDir="false" />
+    <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -25,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -44,8 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>executors:</find>
-      <find>test_command_4</find>
       <find>dir_5</find>
       <find>dir_6</find>
       <find>dir_7</find>
@@ -74,6 +71,8 @@
       <find>description</find>
       <find>test_11</find>
       <find>next_test_step</find>
+      <find>Default executor var 1</find>
+      <find>Default executor var 2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,11 +104,6 @@
             <path>
               <item name="circleci-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="circleci-test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="circleci-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="circleci-test" type="462c0819:PsiDirectoryNode" />
-              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,21 +189,7 @@
       <workItem from="1605859809916" duration="3221000" />
       <workItem from="1610727948221" duration="4288000" />
       <workItem from="1612956833919" duration="10000" />
-      <workItem from="1612957074199" duration="4602000" />
-    </task>
-    <task id="LOCAL-00046" summary="get current user - 1">
-      <created>1573572518349</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1573572518349</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Use env variable in cache key">
-      <created>1573681713839</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1573681713839</updated>
+      <workItem from="1612957074199" duration="5058000" />
     </task>
     <task id="LOCAL-00048" summary="Use env variable in cache key - 1">
       <created>1573681954216</created>
@@ -540,11 +520,25 @@
       <option name="project" value="LOCAL" />
       <updated>1612961672633</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Test command exit">
+      <created>1612978910028</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1612978910037</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Test command exit">
+      <created>1612978987830</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1612978987832</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73705000" />
+    <option name="totallyTimeSpent" value="74161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="875" extended-state="6" />
@@ -626,8 +620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>

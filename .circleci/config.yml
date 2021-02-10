@@ -2,7 +2,7 @@ version: 2.1
 
 aliases:
   - &workspace
-      ~/main_dir
+      ~/circleci-test
 
 executors:
   macos-ios-executor-xcode11:
