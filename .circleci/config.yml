@@ -21,6 +21,7 @@ commands:
   test_command_1:
     description: Test command 1 description
     steps:
+      - checkout
       - run:
           name: "Test command 1 run 1 name"
           command: |
