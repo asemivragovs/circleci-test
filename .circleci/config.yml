@@ -30,13 +30,15 @@ commands:
             dateq
             echo "three"
             dateq
+            pwd
+            ls -la
             echo "executor var 1: $executor_env_var"
             echo "executor var 2: $EXC_ENV_VAR_1"
             echo "executor var 2: $EXC_ENV_VAR_2"
             export TEST_VAR_1="test_1"
             echo "export TEST_VAR_2=test_2" >> $BASH_ENV
-            chmod +x ../test_script.sh
-            ../test_script.sh
+            chmod +x ./scripts/test_script.sh
+            ./scripts/test_script.sh
           shell: /bin/bash
       - next_test_step
 
