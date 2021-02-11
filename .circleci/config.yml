@@ -77,7 +77,7 @@ commands:
             dateq
             echo "three"
             dateqs
-          shell: bin/bash
+          shell: /bin/bash
       - next_test_step
       - run:
           name: "Next step with 'when: always'"
