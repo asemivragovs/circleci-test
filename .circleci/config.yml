@@ -18,7 +18,7 @@ executors:
     environment:
       EXC_ENV_VAR_3: << parameters.executor_env_var_1 >>
       EXC_ENV_VAR_4: << parameters.executor_env_var_2 >>
-      EXC_ENV_VAR_5: 12
+      EXC_ENV_VAR_5: 10
     working_directory: *workspace
 
 commands:
