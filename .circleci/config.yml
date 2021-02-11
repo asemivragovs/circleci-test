@@ -24,38 +24,44 @@ executors:
 commands:
   test_command_1:
     description: Test command 1 description
+    parameters:
+      run_param:
+        type: string
+        default: none
     steps:
       - checkout
       - run:
           name: "Test command 1 run 1 name"
           command: |
+            echo "---run_param: $(<<parameters.run_param>>)"
+            echo "---run_param: <<parameters.run_param>>"
+            if [ <<parameters.run_param>> = "1" ]; then
+              set +e
+              echo "---set +e"
+            elif [ <<parameters.run_param>> = "2" ]; then
+              set +o
+              echo "---set +o"
+            elif [ <<parameters.run_param>> = "3" ]; then
+              set +eo
+              echo "---set +eo"
+            elif [ <<parameters.run_param>> = "4" ]; then
+              set +eo pipefail
+              echo "---set +eo pipefail"
+            elif [ <<parameters.run_param>> = "5" ]; then
+              set +e pipefail
+              echo "---set +e pipefail"
+            elif [ <<parameters.run_param>> = "6" ]; then
+              set +o pipefail
+              echo "---set +o pipefail"
+            else
+              echo "---else"
+            fi
             echo "one"
             dateq
             echo "two"
             dateq
             echo "three"
             dateq
-
-            echo "executor var 1: $executor_env_var_1"
-            echo "executor var 2: $executor_env_var_2"
-            echo "executor var 3: $EXC_ENV_VAR_3"
-            echo "executor var 4: $EXC_ENV_VAR_4"
-            echo "executor var 5: $EXC_ENV_VAR_5"
-
-            echo "job var 1: $JOB_ENV_VAR_1"
-            echo "job var 2: $JOB_ENV_VAR_2"
-            echo "job var 3: $JOB_ENV_VAR_3"
-            echo "job var 4: $JOB_ENV_VAR_4"
-            echo "job var 5: $JOB_ENV_VAR_5"
-            echo "job var 6: $JOB_ENV_VAR_6"
-            echo "job var 7: $JOB_ENV_VAR_7"
-
-            export STEP_ENV_VAR_1="step env var 1"
-            echo "export STEP_ENV_VAR_2='step env var 2'" >> $BASH_ENV
-
-            chmod +x ./scripts/test_script.sh
-            ./scripts/test_script.sh
-          shell: /bin/bash
       - next_test_step
       - run:
           name: "Next step with 'when: always'"
@@ -86,11 +92,12 @@ commands:
           when: always
 
   test_command_3:
-    description: Test command 3 description
+    description: Test environment variables from job and executor
     steps:
       - run:
           name: "Test command 3"
           command: |
+            set +e
             echo "one"
             dateq
             echo "two"
@@ -153,6 +160,26 @@ commands:
           name: "Test command 6"
           command: |
             set -e
+            echo "executor var 1: $executor_env_var_1"
+            echo "executor var 2: $executor_env_var_2"
+            echo "executor var 3: $EXC_ENV_VAR_3"
+            echo "executor var 4: $EXC_ENV_VAR_4"
+            echo "executor var 5: $EXC_ENV_VAR_5"
+
+            echo "job var 1: $JOB_ENV_VAR_1"
+            echo "job var 2: $JOB_ENV_VAR_2"
+            echo "job var 3: $JOB_ENV_VAR_3"
+            echo "job var 4: $JOB_ENV_VAR_4"
+            echo "job var 5: $JOB_ENV_VAR_5"
+            echo "job var 6: $JOB_ENV_VAR_6"
+            echo "job var 7: $JOB_ENV_VAR_7"
+
+            export STEP_ENV_VAR_1="step env var 1"
+            echo "export STEP_ENV_VAR_2='step env var 2'" >> $BASH_ENV
+
+            chmod +x ./scripts/test_script.sh
+            ./scripts/test_script.sh
+
             echo "one"
             dateq
             echo "two"
@@ -340,24 +367,70 @@ commands:
 
 jobs:
   test_1:
-    executor:
-      name: macos-ios-executor-xcode11
-      executor_env_var_2: "Executor env var 2 from job"
-    environment:
-      JOB_ENV_VAR_1: "Job env var 1"
-      JOB_ENV_VAR_2: $EXC_ENV_VAR_5
-      JOB_ENV_VAR_3: "Job env var 3"
-      JOB_ENV_VAR_4: $EXC_ENV_VAR_3
-      JOB_ENV_VAR_5: $EXC_ENV_VAR_4
-      JOB_ENV_VAR_6: $executor_env_var_1
-      JOB_ENV_VAR_7: $executor_env_var_2
+    executor: macos-ios-executor-xcode11
     steps:
       - run:
           name: "Test job 1 name"
           command: |
             echo "Test job 1"
           shell: /bin/bash
-      - test_command_1
+      - test_command_1:
+          run_param: "1"
+
+  test_1_1:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 1 name"
+          command: |
+            echo "Test job 1"
+          shell: /bin/bash
+      - test_command_1:
+          run_param: "2"
+
+  test_1_2:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 1 name"
+          command: |
+            echo "Test job 1"
+          shell: /bin/bash
+      - test_command_1:
+          run_param: "3"
+
+  test_1_3:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 1 name"
+          command: |
+            echo "Test job 1"
+          shell: /bin/bash
+      - test_command_1:
+          run_param: "4"
+
+  test_1_4:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 1 name"
+          command: |
+            echo "Test job 1"
+          shell: /bin/bash
+      - test_command_1:
+          run_param: "5"
+
+  test_1_5:
+    executor: macos-ios-executor-xcode11
+    steps:
+      - run:
+          name: "Test job 1 name"
+          command: |
+            echo "Test job 1"
+          shell: /bin/bash
+      - test_command_1:
+          run_param: "6"
 
   test_2:
     executor: macos-ios-executor-xcode11
@@ -403,7 +476,17 @@ jobs:
       - test_command_5
 
   test_6:
-    executor: macos-ios-executor-xcode11
+    executor:
+      name: macos-ios-executor-xcode11
+      executor_env_var_2: "Executor env var 2 from job"
+    environment:
+      JOB_ENV_VAR_1: "Job env var 1"
+      JOB_ENV_VAR_2: $EXC_ENV_VAR_5
+      JOB_ENV_VAR_3: "Job env var 3"
+      JOB_ENV_VAR_4: $EXC_ENV_VAR_3
+      JOB_ENV_VAR_5: $EXC_ENV_VAR_4
+      JOB_ENV_VAR_6: $executor_env_var_1
+      JOB_ENV_VAR_7: $executor_env_var_2
     steps:
       - run:
           name: "Test job 6 name"
@@ -498,11 +581,16 @@ workflows:
   test_workflow:
     jobs:
       - test_1
-      - test_2
-      - test_3
+      - test_1_1
+      - test_1_2
+      - test_1_3
+      - test_1_4
+      - test_1_5
+#      - test_2
+#      - test_3
 #      - test_4
 #      - test_5
-#      - test_6
+      - test_6
 #      - test_7
 #      - test_8
 #      - test_9
