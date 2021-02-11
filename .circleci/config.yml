@@ -76,7 +76,7 @@ commands:
             echo "two"
             dateq
             echo "three"
-            dateqs
+            dateqs || true
           shell: /bin/bash
       - next_test_step
       - run:
@@ -91,7 +91,6 @@ commands:
       - run:
           name: "Test command 3"
           command: |
-            set +e
             echo "one"
             dateq
             echo "two"
@@ -500,7 +499,7 @@ workflows:
     jobs:
       - test_1
       - test_2
-#      - test_3
+      - test_3
 #      - test_4
 #      - test_5
 #      - test_6
