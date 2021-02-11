@@ -9,12 +9,16 @@ executors:
     machine:
       image: ubuntu-1604:201903-01
     parameters:
-      executor_env_var:
+      executor_env_var_1:
         type: string
-        default: "Default executor var 1"
+        default: "Executor env var 1"
+      executor_env_var_2:
+        type: string
+        default: "Executor env vars 2"
     environment:
-      EXC_ENV_VAR_1: << parameters.executor_env_var >>
-      EXC_ENV_VAR_2: "Default executor var 2 "
+      EXC_ENV_VAR_3: << parameters.executor_env_var_1 >>
+      EXC_ENV_VAR_4: << parameters.executor_env_var_2 >>
+      EXC_ENV_VAR_5: "Executor env var 5"
     working_directory: *workspace
 
 commands:
@@ -31,17 +35,29 @@ commands:
             dateq
             echo "three"
             dateq
-            pwd
-            ls -la
-            echo "executor var 1: $executor_env_var"
-            echo "executor var 2: $EXC_ENV_VAR_1"
-            echo "executor var 2: $EXC_ENV_VAR_2"
-            export TEST_VAR_1="test_1"
-            echo "export TEST_VAR_2=test_2" >> $BASH_ENV
+
+            echo "executor var 1: executor_env_var_1"
+            echo "executor var 2: executor_env_var_2"
+            echo "executor var 3: $EXC_ENV_VAR_3"
+            echo "executor var 4: $EXC_ENV_VAR_4"
+            echo "executor var 5: $EXC_ENV_VAR_5"
+
+            echo "job var 1: $JOB_ENV_VAR_1"
+            echo "job var 2: $JOB_ENV_VAR_2"
+            echo "job var 2: $JOB_ENV_VAR_3"
+
+            export STEP_ENV_VAR_1="step env var 1"
+            echo "export STEP_ENV_VAR_1=step env var 2" >> $BASH_ENV
+
             chmod +x ./scripts/test_script.sh
             ./scripts/test_script.sh
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_2:
     description: Test command 2 description
@@ -56,6 +72,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_3:
     description: Test command 3 description
@@ -72,6 +93,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_4:
     description: Test command 4 description
@@ -87,6 +113,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_5:
     description: Test command 5 description
@@ -103,6 +134,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_6:
     description: Test command 6 description
@@ -118,6 +154,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_7:
     description: Test command 7 description
@@ -134,6 +175,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_8:
     description: Test command 8 description
@@ -149,6 +195,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_9:
     description: Test command 9 description
@@ -165,6 +216,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_10:
     description: Test command 10 description
@@ -180,6 +236,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_11:
     description: Test command 11 description
@@ -196,6 +257,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_12:
     description: Test command 12 description
@@ -211,6 +277,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_13:
     description: Test command 13 description
@@ -227,6 +298,11 @@ commands:
             dateq
           shell: /bin/bash
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   test_command_14:
     description: Test command 14 description
@@ -242,6 +318,11 @@ commands:
             echo "three"
             dateq
       - next_test_step
+      - run:
+          name: "Next step with 'when: always'"
+          command: |
+            echo "Next test step with 'when: always'"
+          when: always
 
   next_test_step:
     description: The next test step
@@ -250,11 +331,16 @@ commands:
           name: "The next test step"
           command: |
             echo "Next test step"
-          when: always
 
 jobs:
   test_1:
-    executor: macos-ios-executor-xcode11
+    executor:
+      name: macos-ios-executor-xcode11
+      executor_env_var_2: "Executor env var 2 from job"
+    environment:
+      JOB_ENV_VAR_1: "Job env var 1"
+      JOB_ENV_VAR_2: $EXC_ENV_VAR_1
+      JOB_ENV_VAR_3: "Job env var 3"
     steps:
       - run:
           name: "Test job 1 name"
