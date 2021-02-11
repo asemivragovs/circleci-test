@@ -51,7 +51,7 @@ commands:
             echo "job var 7: $JOB_ENV_VAR_7"
 
             export STEP_ENV_VAR_1="step env var 1"
-            echo "export STEP_ENV_VAR_1=step env var 2" >> $BASH_ENV
+            echo "export STEP_ENV_VAR_2=step env var 2" >> $BASH_ENV
 
             chmod +x ./scripts/test_script.sh
             ./scripts/test_script.sh
