@@ -55,6 +55,8 @@ commands:
             # test 4
             # test 5
             # test 6
+            # test 7
+            # test 8
 
             export STEP_ENV_VAR_1="step env var 1"
             echo "export STEP_ENV_VAR_2='step env var 2'" >> $BASH_ENV
