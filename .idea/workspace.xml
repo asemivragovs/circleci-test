@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d4a7645-54c9-495d-acea-f00ff32e31b4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/test_script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/test_script.sh" afterDir="false" />
     </list>
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="310">
+              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="50" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -34,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/test_script.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -43,16 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dir_5</find>
-      <find>dir_6</find>
-      <find>dir_7</find>
-      <find>working_directory</find>
-      <find>test_3</find>
-      <find>main_di</find>
-      <find>executor: macos-ios-executor-xcode11</find>
-      <find>test_2_1</find>
-      <find>test_command_2_1</find>
-      <find>dir_2</find>
       <find>test_command_1</find>
       <find>test_2</find>
       <find>test_command_2</find>
@@ -73,6 +64,16 @@
       <find>Default executor var 1</find>
       <find>Default executor var 2</find>
       <find>test_1</find>
+      <find>$STEP_ENV_VAR_1</find>
+      <find>STEP_ENV_VAR_1</find>
+      <find>$</find>
+      <find>executor_env_var_2</find>
+      <find>executor_env_var_1</find>
+      <find>$JOB_ENV_VAR_1</find>
+      <find>JOB_ENV_VAR_1</find>
+      <find>EXC_ENV_VAR_1</find>
+      <find>ecutor_env_var_2</find>
+      <find>JOB_ENV_VAR_3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,21 +194,7 @@
       <workItem from="1605859809916" duration="3221000" />
       <workItem from="1610727948221" duration="4288000" />
       <workItem from="1612956833919" duration="10000" />
-      <workItem from="1612957074199" duration="5922000" />
-    </task>
-    <task id="LOCAL-00051" summary="Use env variable in cache key - 4">
-      <created>1573683066966</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683066966</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Use env variable in cache key - 5">
-      <created>1573683149511</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1573683149511</updated>
+      <workItem from="1612957074199" duration="7832000" />
     </task>
     <task id="LOCAL-00053" summary="Use env variable in cache key - 6">
       <created>1573683219011</created>
@@ -538,11 +525,25 @@
       <option name="project" value="LOCAL" />
       <updated>1612980109948</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Test command exit">
+      <created>1612980221281</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1612980221281</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Test command exit">
+      <created>1613032399832</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1613032399836</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75025000" />
+    <option name="totallyTimeSpent" value="76935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="875" extended-state="6" />
@@ -617,15 +618,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="310">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="50" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/test_script.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
