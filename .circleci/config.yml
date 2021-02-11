@@ -49,14 +49,6 @@ commands:
             echo "job var 5: $JOB_ENV_VAR_5"
             echo "job var 6: $JOB_ENV_VAR_6"
             echo "job var 7: $JOB_ENV_VAR_7"
-            # test 1
-            # test 2
-            # test 3
-            # test 4
-            # test 5
-            # test 6
-            # test 7
-            # test 8
 
             export STEP_ENV_VAR_1="step env var 1"
             echo "export STEP_ENV_VAR_2='step env var 2'" >> $BASH_ENV
