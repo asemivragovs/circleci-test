@@ -61,7 +61,7 @@ commands:
             echo "two"
             dateq
             echo "three"
-            dateq
+            dateq || true
       - next_test_step
       - run:
           name: "Next step with 'when: always'"
@@ -581,7 +581,7 @@ workflows:
   version: 2
   test_workflow:
     jobs:
-#      - test_1
+      - test_1
 #      - test_1_1
 #      - test_1_2
 #      - test_1_3
@@ -591,7 +591,7 @@ workflows:
 #      - test_3
 #      - test_4
 #      - test_5
-      - test_6
+#      - test_6
 #      - test_7
 #      - test_8
 #      - test_9
