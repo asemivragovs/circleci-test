@@ -156,6 +156,7 @@ commands:
   test_command_6:
     description: Test command 6 description
     steps:
+      - checkout
       - run:
           name: "Test command 6"
           command: |
@@ -580,12 +581,12 @@ workflows:
   version: 2
   test_workflow:
     jobs:
-      - test_1
-      - test_1_1
-      - test_1_2
-      - test_1_3
-      - test_1_4
-      - test_1_5
+#      - test_1
+#      - test_1_1
+#      - test_1_2
+#      - test_1_3
+#      - test_1_4
+#      - test_1_5
 #      - test_2
 #      - test_3
 #      - test_4
