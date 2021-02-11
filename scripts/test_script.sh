@@ -11,21 +11,21 @@ echo "executor var 4: $EXC_ENV_VAR_4"
 echo "executor var 5: $EXC_ENV_VAR_5"
 
 echo "test 1"
-if [ $EXC_ENV_VAR_5 -ge 12 ]; then
+if [ $EXC_ENV_VAR_5 -ge 11 ]; then
 echo "yes"
 else
 echo "no"
 fi
 
 echo "test 2"
-if [ $EXC_ENV_VAR_5 -eq 12 ]; then
+if [ $EXC_ENV_VAR_5 -eq 012 ]; then
 echo "yes"
 else
 echo "no"
 fi
 
 echo "test 3"
-if [ $EXC_ENV_VAR_5 = "12" ]; then
+if [ $EXC_ENV_VAR_5 = "012" ]; then
 echo "yes"
 else
 echo "no"
