@@ -36,7 +36,7 @@ commands:
             echo "Test command"
       - when:
           condition:
-            equal: [1.5, <<parameters.run_param>>]
+            equal: [ "1.5", <<parameters.run_param>> ]
           steps:
             - run: echo "Condition true"
       - run: echo "After condition"
@@ -75,7 +75,6 @@ commands:
         default: none
     steps:
       - run:
-          name: "Test command 3"
           command: |
             if [ "<<parameters.run_param>>" = "1.6" ]; then
               echo "Condition true"
