@@ -33,35 +33,13 @@ commands:
       - run:
           name: "Test command 1 run 1 name"
           command: |
-            echo "---run_param: $(<<parameters.run_param>>)"
-            echo "---run_param: <<parameters.run_param>>"
-            if [ <<parameters.run_param>> = "1" ]; then
-              set +e
-              echo "---set +e"
-            elif [ <<parameters.run_param>> = "2" ]; then
-              set +o
-              echo "---set +o"
-            elif [ <<parameters.run_param>> = "3" ]; then
-              set +eo
-              echo "---set +eo"
-            elif [ <<parameters.run_param>> = "4" ]; then
-              set +eo pipefail
-              echo "---set +eo pipefail"
-            elif [ <<parameters.run_param>> = "5" ]; then
-              set +e pipefail
-              echo "---set +e pipefail"
-            elif [ <<parameters.run_param>> = "6" ]; then
-              set +o pipefail
-              echo "---set +o pipefail"
-            else
-              echo "---else"
-            fi
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-            dateq || true
+            echo "Test command"
+      - when:
+          condition:
+            equal: [1.5, <<parameters.run_param>>]
+          steps:
+            - run: echo "Condition true"
+      - run: echo "After condition"
       - next_test_step
       - run:
           name: "Next step with 'when: always'"
@@ -71,60 +49,62 @@ commands:
 
   test_command_2:
     description: Test command 2 description
+    parameters:
+      run_param:
+        type: string
+        default: none
     steps:
       - run:
-          name: "Test command 2"
           command: |
-            set +e
-            echo "one"
-            echo "executor var 4: $EXC_ENV_VAR_4"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-            dateqs || true
+            if [ "<<parameters.run_param>>" = "1.6" ]; then
+              echo "Condition true"
+            fi
           shell: /bin/bash
-      - next_test_step
-      - run:
-          name: "Next step with 'when: always'"
-          command: |
-            echo "Next test step with 'when: always'"
-          when: always
+#      - next_test_step
+#      - run:
+#          name: "Next step with 'when: always'"
+#          command: |
+#            echo "Next test step with 'when: always'"
+#          when: always
 
   test_command_3:
     description: Test environment variables from job and executor
+    parameters:
+      run_param:
+        type: string
+        default: none
     steps:
       - run:
           name: "Test command 3"
           command: |
-            set +e
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-            dateq
+            if [ "<<parameters.run_param>>" = "1.6" ]; then
+              echo "Condition true"
+            fi
           shell: /bin/bash
-      - next_test_step
-      - run:
-          name: "Next step with 'when: always'"
-          command: |
-            echo "Next test step with 'when: always'"
-          when: always
+#      - next_test_step
+#      - run:
+#          name: "Next step with 'when: always'"
+#          command: |
+#            echo "Next test step with 'when: always'"
+#          when: always
 
   test_command_4:
     description: Test command 4 description
+    parameters:
+      run_param:
+        type: string
+        default: none
     steps:
       - run:
-          name: "Test command 4"
+          name: "Test command 1 run 1 name"
           command: |
-            set +e
-            echo "one"
-            dateq
-            echo "two"
-            dateq
-            echo "three"
-            dateq
+            echo "Test command"
+      - when:
+          condition:
+            equal: [ 1.5, <<parameters.run_param>> ]
+          steps:
+            - run: echo "Condition true"
+      - run: echo "After condition"
       - next_test_step
       - run:
           name: "Next step with 'when: always'"
@@ -376,7 +356,7 @@ jobs:
             echo "Test job 1"
           shell: /bin/bash
       - test_command_1:
-          run_param: "1"
+          run_param: "1.5"
 
   test_1_1:
     executor: macos-ios-executor-xcode11
@@ -441,7 +421,8 @@ jobs:
           command: |
             echo "Test job 2"
           shell: /bin/bash
-      - test_command_2
+      - test_command_2:
+          run_param: "1.6"
 
   test_3:
     machine:
@@ -452,7 +433,8 @@ jobs:
           command: |
             echo "Test job 3"
           shell: /bin/bash
-      - test_command_3
+      - test_command_3:
+          run_param: "1.64"
 
   test_4:
     machine:
@@ -463,7 +445,8 @@ jobs:
           command: |
             echo "Test job 4"
           shell: /bin/bash
-      - test_command_4
+      - test_command_4:
+          run_param: "1"
 
   test_5:
     machine:
@@ -587,9 +570,9 @@ workflows:
 #      - test_1_3
 #      - test_1_4
 #      - test_1_5
-#      - test_2
-#      - test_3
-#      - test_4
+      - test_2
+      - test_3
+      - test_4
 #      - test_5
 #      - test_6
 #      - test_7
