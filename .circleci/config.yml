@@ -11,7 +11,7 @@ executors:
     parameters:
       executor_env_var_1:
         type: string
-        default: "Executor env var 12"
+        default: "Executor env var 1"
       executor_env_var_2:
         type: string
         default: "Executor env vars 2"
