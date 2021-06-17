@@ -11,7 +11,7 @@ executors:
     parameters:
       executor_env_var_1:
         type: string
-        default: "Executor env var 1"
+        default: "Executor env var 11"
       executor_env_var_2:
         type: string
         default: "Executor env vars 2"
@@ -19,7 +19,7 @@ executors:
       EXC_ENV_VAR_3: << parameters.executor_env_var_1 >>
       EXC_ENV_VAR_4: << parameters.executor_env_var_2 >>
       EXC_ENV_VAR_5: 10
-    working_directory: *workspac e
+    working_directory: *workspace
 
 commands:
   test_command_1:
